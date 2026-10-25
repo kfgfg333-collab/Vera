@@ -44,9 +44,9 @@ Veo 3.1 Lite 10 (Ultra 5) · Fast 20 (Ultra 10) · Quality 100 · Omni Flash 720
 1. **Костюмный референс (до любых клипов)** — промпт из `02_vera_costume_reference_prompt.md` в Nano Banana (во Flow: режим Image, «Image aspect ratio» 9:16 или 3:4) с ingredients = лицо + тело Веры. Отобрать 1 кадр в полный рост (+ при необходимости портрет) → сохранить в проект; файл — в `episodes/EPNN_slug/refs/costume.png`.
 2. **Персонаж серии (рекомендуется, проверить в интерфейсе):** Characters → новый персонаж `Vera EPNN` → 2 изображения: костюмный кадр в полный рост + портрет лица в костюме (или исходный референс лица) → голос любой (озвучка всё равно из ElevenLabs) → Done. Если Characters недоступны для выбранной видеомодели — использовать обычные ingredients (п. 4).
 3. **Локации** — при необходимости 1–2 изображения локации без людей.
-4. **Клипы** — режим Ingredients, 9:16. Два типа клипов (`visual_style.md`: не менее половины — тип EVENT):
-   - **VERA** — Вера в кадре: ingredients = персонаж серии **или** лицо + костюмный кадр; + локация;
-   - **EVENT** — само событие и его участники, Вера вне кадра или на втором плане: ingredients = локация и, при необходимости, референс участника/техники (например, сгенерированный кадр космонавта в скафандре или корабля), чтобы участники и техника совпадали между клипами.
+4. **Клипы** — режим Ingredients, 9:16. **Один тип клипа: Вера в кадре + событие за ней** (главное правило — `CLAUDE.md`). Клипов без Веры нет.
+   - ingredients (≤ 3): персонаж серии `Vera EPNN` (если Characters работают в выбранном режиме) **или** лицо + костюмный кадр; + локация; при свободном слоте — референс участника/техники (например, пожарного, корабля), чтобы они совпадали между клипами. Если слотов не хватает — участники описываются текстом.
+   - В каждом промпте прямо: Vera is the main character and stays clearly visible in frame from the first to the last frame.
    Модели и длительности:
    - базово **Veo 3.1 Fast, 8 с** (лучший баланс; ingredients только 8 с);
    - **Omni Flash 10 с** — для длинных фраз, сложной игры лица, и если нужна правка; черновики в 360p;
@@ -55,45 +55,34 @@ Veo 3.1 Lite 10 (Ultra 5) · Fast 20 (Ultra 10) · Quality 100 · Omni Flash 720
 6. Апскейл выбранных клипов до 1080p → скачать → CapCut.
 
 ### Звук и губы
-Озвучка Веры — из ElevenLabs, поэтому:
-- по умолчанию в промпте: `She does not speak; no dialogue; natural ambient sound only` (рот закрыт или не в кадре — нет рассинхрона);
-- селфи-реплики «в камеру» допустимы, но тогда губы не совпадут с ElevenLabs. Варианты: (а) короткий кадр, в монтаже — голос поверх; (б) экспериментально — генерировать фразу во Flow голосовым референсом Omni (русский не подтверждён). По умолчанию — (а).
-- Звук окружения из Flow можно оставить тихим подложкой (−24…−30 dB) или заменить библиотечными SFX.
+Озвучка Веры — из ElevenLabs; звук генерации Flow под её репликами заглушается в монтаже. Вера в каждом клипе в одном из двух режимов (указывать в промпте явно):
+- **TALK** — обращается к зрителю: `Vera talks to the camera, her lips moving naturally as she speaks; any generated speech will be replaced in editing; natural ambient sound`. Губы не совпадут с ElevenLabs по слогам — поэтому фраза под TALK-клипом короткая (≤ 8–10 с), Вера по возможности в среднем плане, а не в крупном. Можно ли во Veo получить движение губ без сгенерированной речи — **не подтверждено, проверить в интерфейсе**.
+- **REACT** — смотрит на событие / реагирует, рот закрыт или почти закрыт: `She does not speak; no dialogue; natural ambient sound: …`. Голос Веры звучит поверх как её рассказ.
+- Чередовать TALK и REACT: крючок и финал — обычно TALK; кульминация — обычно REACT.
+- Экспериментально: фраза голосом из Flow (голосовой референс Omni) — русский не подтверждён; по умолчанию не используем.
+- Звук окружения из Flow можно оставить тихой подложкой (−24…−30 dB) или заменить библиотечными SFX.
 
 ### Реальные исторические личности и тяжёлые сцены
 - Справка Flow предупреждает: для загруженных фото людей действуют меры предосторожности, и часть запросов может не сгенерироваться. Правила Google запрещают выдавать себя за реального человека с целью обмана. Поэтому реальных лиц (Гагарин, Николай II, Ленин…) описывать **по исторически точной внешности, форме и обстановке**, без загрузки фотографий. Узнаваемость передавать образом: оранжевый скафандр и белый шлем (надпись «СССР» не генерировать — генератор искажает буквы), мундир, обстановка. Портретное сходство с конкретным человеком **не гарантировано**: не подтверждено, проверить в интерфейсе.
-- Сцены насилия и катастроф: писать прямо по сути события (`visual_style.md` → «Насилие и драматичные сцены»). При блоке — следующая ступень лестницы в запасном промпте, а не отказ от сцены.
+- Сцены насилия и катастроф: писать прямо по сути события за спиной Веры (`visual_style.md` → «Насилие и драматичные сцены»). При блоке — следующая ступень лестницы в запасном промпте (Вера остаётся в кадре), а не отказ от сцены.
 
 ## 4. Стандарт промпта клипа
-Язык промпта — **английский** (поддержка русских промптов официально не описана). Порядок блоков фиксированный; без противоречивых прилагательных; 90–170 слов. Шаблон ниже — тип **VERA**; для типа **EVENT** см. вариант после него.
+Язык промпта — **английский** (поддержка русских промптов официально не описана). Порядок блоков фиксированный; без противоречивых прилагательных. Изменяемая часть (без [REFERENCES], [STYLE], [AVOID] и постоянных фраз [VERA] о присутствии и костюме) — ориентир 120–230 слов (рабочий ориентир проекта, не требование Google); если генерация путается — сокращать [EVENT BEHIND HER] и [SETTING & ERA], а не блок [VERA]. **Один шаблон для всех клипов — Вера в кадре, событие за ней.**
 
 ```
-[SCENE ROLE] One-line purpose: e.g. "Hook shot: Vera arrives at the riverbank as the crowd gathers."
-[REFERENCES] Use @vera_face as the exact identity and @vera_EPNN_costume as the exact outfit of the woman (Vera). Keep her face, age, eye shape, grey-green eyes, mole under the eye, freckles, dark-brown shoulder-length wavy hair and natural adult proportions identical. [+ Use @loc_x as the setting.]
-[SUBJECT & ACTION] Vera, a woman in her mid-twenties, <one main action>, <emotion>.
-[SETTING & ERA] <place>, <year/period>, <time of day>, <weather>, <2–3 period-accurate details>.
-[BACKGROUND] <calm, meaningful background action>.
-[CAMERA] <shot size>, <one camera movement>, vertical 9:16 composition, subject <placement>.
-[LIGHT & PALETTE] <motivated light>, <palette>.
-[START/END] Starts with <frame>. Ends with <frame> (for the cut).
-[AUDIO] She does not speak; no dialogue; natural ambient sound: <sounds>.
-[STYLE] (стиль-строка из visual_style.md)
-[AVOID] No text, no logos, no watermarks, no extra limbs or fingers, no face changes, no outfit changes, no modern objects, no chaotic camera.
-```
-Вариант **EVENT** (само событие; Вера не в фокусе):
-```
-[SCENE ROLE] One-line purpose: e.g. "Climax: the Vostok rocket lifts off from the launch pad."
-[REFERENCES] (optional) Use @loc_x as the setting and @ref_x as the exact look of [participant / vehicle]. [If Vera appears: Vera (@vera_face, @vera_EPNN_costume) stands in the background watching, small in frame.]
-[EVENT ACTION] <participants> <one central action of the historical event>, <intensity>.
+[SCENE ROLE] One-line purpose: e.g. "Climax: the Vostok rocket lifts off behind Vera."
+[REFERENCES] Use @vera_face as the exact identity and @vera_EPNN_costume as the exact outfit of the woman (Vera). Keep her face, age, eye shape, grey-green eyes, mole under the eye, freckles, dark-brown shoulder-length wavy hair and natural adult proportions identical. [Use @loc_x as the setting.] [Use @ref_x as the exact look of <participant / vehicle>.]
+[VERA] Vera is the main character and stays clearly visible in frame from the first to the last frame, face readable. Position: <foreground / mid-ground, left/right/lower third>. <TALK: she talks to the camera, lips moving naturally | REACT: she watches/turns toward the event, mouth closed>. Emotion: <…>. Gaze: <camera → event → camera>.
+[EVENT BEHIND HER] <participants> <one central action of the historical event>, <how it develops during the clip>; the event is clearly visible behind/beside her and is not blocked by her.
 [SETTING & ERA] <place>, <date>, <time of day>, <weather>, <period-accurate uniforms, weapons, vehicles, architecture>.
-[CAMERA] <shot size>, <one camera movement>, vertical 9:16 composition.
-[LIGHT & PALETTE] …
-[START/END] Starts with … Ends with …
-[AUDIO] No dialogue; natural sound: <engines / clash of weapons / crowd / bells>.
+[CAMERA] <shot size>, <one smooth camera movement>, vertical 9:16 composition: Vera <placement>, event <placement>.
+[LIGHT & PALETTE] <motivated light on Vera's face from the event>, <palette>.
+[START/END] Starts with <frame, Vera visible>. Ends with <frame, Vera visible> (for the cut).
+[AUDIO] <TALK: any generated speech will be replaced in editing; natural ambient sound: … | REACT: She does not speak; no dialogue; natural ambient sound: …>.
 [STYLE] (стиль-строка из visual_style.md)
-[AVOID] No text, no logos, no watermarks, no extra limbs or fingers, no modern objects, no anachronisms, no gratuitous gore close-ups.
+[AVOID] No shots without Vera, Vera must not leave the frame, no text, no logos, no watermarks, no extra limbs or fingers, no face changes, no outfit changes, no modern objects, no anachronisms, no chaotic camera, no gratuitous gore close-ups.
 ```
 `@vera_face`, `@vera_EPNN_costume`, `@loc_x`, `@ref_x` — рабочие метки. Пользователь заменяет их тем, что Flow предлагает после ввода `@` (или `@Vera EPNN`, если создан персонаж). Блок [REFERENCES] пишется полностью в каждом клипе — промпт не опирается на соседние клипы. Описание внешности в тексте дублирует референс: если генерация «уплывает», текст удерживает ключевые черты.
 
 ### Чек-лист промпта (/flow-prompt-review)
-Тип клипа указан; EVENT-клипов не меньше половины? Одна задача? Действие показывает то, о чём говорит фраза? Свет/время/погода совпадают с соседями? Начало/конец стыкуются? Нет текста в кадре? Длительность клипа ≥ длительности фразы? Есть запасной вариант?
+Вера видна от первого до последнего кадра каждого клипа и прямо закреплена в промпте [VERA]; событие за ней видно и не перекрыто; режим TALK/REACT указан? Одна задача? Действие показывает то, о чём говорит фраза? Свет/время/погода совпадают с соседями? Начало/конец стыкуются? Нет текста в кадре? Длительность клипа ≥ длительности фразы? Есть запасной вариант?

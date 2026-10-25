@@ -3,75 +3,44 @@
 Стандарт: `knowledge/google_flow_guide.md` §3–4. Писать только после готового `02_vera_costume_reference_prompt.md`.
 Модель по умолчанию: Veo 3.1 Fast · Ingredients · 9:16 · 8 с (ingredients у Veo — только 8 с; 10 с — только Omni Flash; Veo Quality — без ingredients).
 
-**Два типа клипов:**
-- **EVENT** — само событие и его участники (Вера вне кадра или на втором плане). **Не менее половины клипов.**
-- **VERA** — Вера рядом с событием: реакция, комментарий, проход.
+**Главное правило:** в **каждом** клипе Вера видна от первого до последнего кадра, лицо читается; событие разворачивается за ней, сбоку или в глубине и не перекрыто ею. Клипов без Веры нет. Каждый промпт самодостаточен и прямо закрепляет присутствие Веры (блок [VERA]) — Flow не помнит соседние клипы.
 
-**Как прикреплять референсы:**
-- VERA-клип: режим Ingredients → персонаж `Vera EPNN` (если создан в Characters) **или** лицо (`vera_face_reference.png`) + костюмный кадр (`refs/costume.png`); + локация.
-- EVENT-клип: локация и, если нужно, референс участника или техники (`@ref_…`), чтобы они совпадали между клипами. Реальных людей — без загрузки фото, по описанию внешности эпохи (`google_flow_guide.md`).
-- Не более 3 ingredients. Листы A/B не прикреплять. Метки `@…` заменить на имена, которые Flow показывает после ввода `@`.
-Рабочие метки: `@vera_face`, `@vera_EPNN_costume`, `@loc_…`, `@ref_…` (соответствие — в `09_continuity.md`).
+**Режим Веры в клипе:** TALK — говорит в камеру (губы двигаются; звук генерации заменяется озвучкой) · REACT — смотрит/реагирует, рот закрыт, голос Веры поверх.
 
-| № | Тип | Таймкод | Длит. | Модель/режим | Фраза | План |
+**Как прикреплять референсы (≤ 3 ingredients):** персонаж `Vera EPNN` (если создан в Characters) **или** лицо (`vera_face_reference.png`) + костюмный кадр (`refs/costume.png`); + локация (`@loc_…`); при свободном слоте — участник/техника (`@ref_…`). Листы A/B не прикреплять. Реальных людей — без фото, по описанию эпохи. Метки `@…` заменить на имена, которые Flow показывает после ввода `@` (соответствие — `09_continuity.md`).
+
+| № | Таймкод (расчёт) | Длит. | Модель/режим | Вера: режим · положение | Событие за ней | Фраза |
 |---|---|---|---|---|---|---|
-| 01 | EVENT / VERA | 0:00–0:0_ | 8 с | Veo 3.1 Fast · Ingredients | | |
+| 01 | 0:00–0:0_ | 8 с | Veo 3.1 Fast · Ingredients | TALK · передний план, центр | | |
 
-Итого EVENT: __ из __ (≥ 50%).
-
----
-## Клип 01 (тип: VERA)
-1. **Номер / тип / длительность / таймкод:** 01 · VERA · 8 с (в монтаже 0:00–0:0_) · модель/режим: ___
-2. **Цель и эмоция:**
-3. **Фраза озвучки:** «…»
-4. **Референсы (что прикрепить):** REF_CHARACTER_FACE (`@vera_face`), REF_EPISODE_COSTUME (`@vera_EPNN_costume`) — или персонаж `@Vera EPNN`; REF_LOCATION (`@loc_…`); REF_PREVIOUS_SHOT — только в режиме Frames
-5. **Промпт:**
-```
-[SCENE ROLE] …
-[REFERENCES] Use @vera_face as the exact identity and @vera_EPNN_costume as the exact outfit of the woman (Vera). Keep her face, age, eye shape, grey-green eyes, mole under the eye, freckles, dark-brown shoulder-length wavy hair and natural adult proportions identical.
-[SUBJECT & ACTION] …
-[SETTING & ERA] …
-[BACKGROUND] … (the historical event visible behind her)
-[CAMERA] … vertical 9:16 composition …
-[LIGHT & PALETTE] …
-[START/END] Starts with … Ends with …
-[AUDIO] She does not speak; no dialogue; natural ambient sound: …
-[STYLE] Semi-realistic cinematic 3D/2.5D animation with a subtle painterly texture, natural adult proportions, expressive but realistic facial acting, detailed materials (skin texture, wool, linen, leather, wood, stone, metal, smoke, snow, mud), natural motivated lighting, atmospheric depth, historically plausible props and architecture. Not cartoonish, not childlike, not photorealistic. No on-screen text, no subtitles, no logos, no watermarks.
-[AVOID] No text, no logos, no watermarks, no extra limbs or fingers, no face changes, no outfit changes, no modern objects, no chaotic camera.
-```
-6. **Камера:**
-7. **Действие Веры / что происходит в событии / фон:**
-8. **Исторические детали (форма, оружие, техника, архитектура), свет, атмосфера:**
-9. **Начало / конец для склейки:**
-10. **Риски и запасной вариант** (полный самодостаточный промпт: меньше действия, статичнее камера):
-```
-(полный упрощённый промпт со всеми блоками)
-```
+Вера во всех клипах: __ из __ (должно быть 100%).
 
 ---
-## Клип 02 (тип: EVENT)
-1. **Номер / тип / длительность / таймкод:** 02 · EVENT · 8 с · модель/режим: ___
-2. **Цель и эмоция:**
-3. **Фраза озвучки:** «…»
-4. **Референсы (что прикрепить):** REF_LOCATION (`@loc_…`); участник/техника (`@ref_…`, если нужно); Вера — только если она на втором плане
-5. **Промпт:**
+## Клип 01
+1. **Номер и длительность / таймкод / модель:** 01 · 8 с (в монтаже 0:00–0:0_) · ___
+2. **Фрагмент озвучки:** «…»
+3. **Положение Веры в начале кадра:**
+4. **Выражение лица, взгляд, действие (TALK/REACT; когда в камеру, когда на событие):**
+5. **Что происходит на фоне и как меняется за клип:**
+6. **Композиция и движение камеры:**
+7. **Свет, атмосфера, детали эпохи:**
+8. **Постоянство внешности Веры (что прикрепить):** персонаж `@Vera EPNN` **или** `@vera_face` + `@vera_EPNN_costume`; `@loc_…`; (`@ref_…`)
+9. **Финал клипа и переход к следующему:**
+10. **Основной промпт:**
 ```
 [SCENE ROLE] …
-[REFERENCES] Use @loc_… as the setting [and @ref_… as the exact look of …].
-[EVENT ACTION] …
+[REFERENCES] Use @vera_face as the exact identity and @vera_EPNN_costume as the exact outfit of the woman (Vera). Keep her face, age, eye shape, grey-green eyes, mole under the eye, freckles, dark-brown shoulder-length wavy hair and natural adult proportions identical. Use @loc_… as the setting.
+[VERA] Vera is the main character and stays clearly visible in frame from the first to the last frame, face readable. Position: … TALK/REACT: … Emotion: … Gaze: …
+[EVENT BEHIND HER] … (develops during the clip; clearly visible behind her, not blocked by her)
 [SETTING & ERA] … (period-accurate uniforms, weapons, vehicles, architecture)
-[CAMERA] … vertical 9:16 composition …
+[CAMERA] … one smooth movement, vertical 9:16 composition: Vera …, event …
 [LIGHT & PALETTE] …
-[START/END] Starts with … Ends with …
-[AUDIO] No dialogue; natural sound: …
+[START/END] Starts with … (Vera visible). Ends with … (Vera visible).
+[AUDIO] …
 [STYLE] Semi-realistic cinematic 3D/2.5D animation with a subtle painterly texture, natural adult proportions, expressive but realistic facial acting, detailed materials (skin texture, wool, linen, leather, wood, stone, metal, smoke, snow, mud), natural motivated lighting, atmospheric depth, historically plausible props and architecture. Not cartoonish, not childlike, not photorealistic. No on-screen text, no subtitles, no logos, no watermarks.
-[AVOID] No text, no logos, no watermarks, no extra limbs or fingers, no modern objects, no anachronisms, no gratuitous gore close-ups.
+[AVOID] No shots without Vera, Vera must not leave the frame, no text, no logos, no watermarks, no extra limbs or fingers, no face changes, no outfit changes, no modern objects, no anachronisms, no chaotic camera, no gratuitous gore close-ups.
 ```
-6. **Камера:**
-7. **Действие участников события / фон:**
-8. **Исторические детали, свет, атмосфера:**
-9. **Начало / конец для склейки:**
-10. **Риски и запасной вариант** (полный промпт; для сцен насилия — следующая ступень лестницы из `visual_style.md`: широкий план → момент удара → реакция → последствия):
+11. **Нежелательные артефакты и запасной вариант** (полный самодостаточный промпт: проще действие, статичнее камера; для сцен насилия/катастроф — следующая ступень лестницы из `visual_style.md`, Вера остаётся в кадре):
 ```
-(полный запасной промпт)
+(полный запасной промпт со всеми блоками, включая [VERA])
 ```

@@ -15,6 +15,7 @@ ROOT = Path(__file__).resolve().parent.parent
 ARCHIVED = {  # архивные разборы прежних версий правил — устаревшие формулировки там допустимы
     "tests/2026-10-25_topic_filter_tests.md",
     "tests/2026-10-25_v2_major_events_tests.md",
+    "tests/2026-10-25_v3_event_first_tests.md",
 }
 
 REQUIRED = [
@@ -46,6 +47,9 @@ STALE = {
     r"анти-скук": "фильтр анти-скуки (v1–v2)",
     r"сюжетн\w+ лини": "термин «сюжетная линия» вместо «эпизод» (v2)",
     r"глазами (человека той эпохи|крестьянки|горожанина|ратника)": "подмена события очевидцем (v2)",
+    r"EVENT-клип|тип клипа EVENT|\(EVENT / VERA\)": "типы клипов EVENT/VERA (v3)",
+    r"Вера вне кадра": "клипы без Веры (v3)",
+    r"не менее половины клипов": "квота клипов без Веры (v3)",
 }
 
 # Ключевые правила актуальной версии: (файл, регулярное выражение, что проверяем)
@@ -57,9 +61,14 @@ MUST = [
     ("knowledge/visual_style.md", r"## Насилие и драматичные сцены", "раздел о насилии"),
     ("knowledge/visual_style.md", r"не автоматическое решение", "размытие не по умолчанию"),
     ("knowledge/visual_style.md", r"лестниц", "запасная лестница постановки"),
-    ("episodes/episode_template/04_flow_clips.md", r"EVENT", "тип клипа EVENT"),
+    ("episodes/episode_template/04_flow_clips.md", r"\[VERA\] Vera is the main character", "блок [VERA] в шаблоне клипа"),
+    ("episodes/episode_template/04_flow_clips.md", r"No shots without Vera", "запрет кадров без Веры"),
+    ("knowledge/google_flow_guide.md", r"\[VERA\] Vera is the main character", "блок [VERA] в стандарте промпта"),
+    ("knowledge/series_bible.md", r"## Вера в кадре", "правило «Вера в кадре»"),
+    ("episodes/episode_template/10_final_qc.md", r"Вера в каждом клипе", "QC: Вера в каждом клипе"),
     ("episodes/episode_template/10_final_qc.md", r"само событие", "QC: показ события"),
-    ("CLAUDE.md", r"Показывать само событие", "правило в CLAUDE.md"),
+    ("CLAUDE.md", r"ГЛАВНОЕ ПРАВИЛО", "главное правило в CLAUDE.md"),
+    ("CLAUDE.md", r"Вера видна в каждом клипе", "Вера в каждом клипе (CLAUDE.md)"),
     ("knowledge/vera_character_bible.md", r"\*\*Главный\*\* источник идентичности", "главные референсы"),
 ]
 

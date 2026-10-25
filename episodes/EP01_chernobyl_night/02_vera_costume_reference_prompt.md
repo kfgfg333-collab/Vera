@@ -32,8 +32,14 @@ Use the uploaded face image as the strict identity reference and the uploaded fu
 ## Отбор
 Лицо узнаётся? Родинка на месте? Пропорции не «кукольные»? Костюм без анахронизмов (нет пуховиков, кроссовок, логотипов, современных молний)? → сохранить как `refs/costume.png` (+ `refs/costume_portrait.png`); во Flow — оставить в проекте (рабочая метка `vera_EP01_costume`) и, если доступно, создать персонажа `Vera EP01` в Characters (2 изображения: полный рост + портрет). Имена внесены в `09_continuity.md` → «Ассеты Flow».
 
-## Референсы локаций и техники (для EVENT-клипов; делать после костюма)
-Режим Image, 9:16, без людей. Сохранить в `refs/`.
+## Референсы локаций и участников (фон за Верой; делать после костюма)
+Режим Image, 9:16, без людей (кроме референса пожарного). Это фон и участники для клипов — **в самих клипах Вера всегда в кадре**. Сохранить в `refs/`.
+
+`loc_control_room` — `refs/loc_control_room.png`:
+```
+Vertical 9:16 image of a Soviet nuclear power plant unit control room at night in 1986: long grey-green control desks with rows of switches, round analogue gauges and small indicator lamps, a large wall panel covered with a circular grid of small lamps, cold fluorescent ceiling light, linoleum floor, no windows. No people. Semi-realistic cinematic 3D/2.5D animation with a subtle painterly texture, natural motivated lighting, atmospheric depth. No text, no letters, no labels with readable writing, no logos, no watermark.
+```
+
 
 `loc_unit4_night` — `refs/loc_unit4_night.png`:
 ```
