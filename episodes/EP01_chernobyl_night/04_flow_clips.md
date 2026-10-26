@@ -1,12 +1,13 @@
 # Клипы Google Flow — EP01 (версия 4, 27.10.2026)
 
-Один окончательный промпт на клип. Flow генерирует видео, русскую речь Веры и звук в одной генерации. Референсы: `references/vera_face_reference.png` + `refs/vera_EP01_costume_from_K01.png`. Рабочий документ для пользователя — `EP01_Чернобыль_Рабочие_промпты.docx`.
+Один окончательный промпт на клип; Вера говорит по-русски прямо во Flow. Ingredients (3): `references/vera_face_reference.png` + костюм (`refs/vera_EP01_costume_from_K01.png` или `vera_EP01_costume.png`) + картинка локации/пожарного (промпты — `02_vera_costume_reference_prompt.md`). Рабочий документ — `EP01_Чернобыль_Рабочие_промпты.docx`.
 
 ## Клип 01 — Здание за спиной (крючок) · 8 с · Veo 3.1 Fast · Ingredients · 8 с · **создан пользователем**
+Ingredients: лицо + костюм + `loc_unit4_night.png`
 Реплика (12 слов, ≈ 5,0 с): «Видите здание за моей спиной? Через несколько минут реактор в нём взорвётся.»
 ```
 [SCENE] Hook: Vera speaks to the camera in front of the Chernobyl unit 4 building minutes before the accident.
-[REFERENCES] Use the uploaded face image as Vera's exact identity and the uploaded costume image as her exact outfit. Keep identical in every frame: adult woman about 25, grey-green eyes, small mole under the eye, light freckles, dark-brown shoulder-length wavy hair, natural slim adult proportions; long dark worn coat, wine-red scarf, brass compass-rose brooch, dark waistcoat, light shirt.
+[REFERENCES] Use the uploaded face image as Vera's exact identity and the uploaded costume image as her exact outfit. Keep identical in every frame: adult woman about 25, grey-green eyes, small mole under the eye, light freckles, dark-brown shoulder-length wavy hair, natural slim adult proportions; long dark worn coat, wine-red scarf, brass compass-rose brooch, dark waistcoat, light shirt. Use the uploaded location image as the exact look of the power plant buildings and the setting.
 [VERA] Vera is the main character and stays clearly visible from the first to the last frame, face readable. Foreground, lower half of the frame, centred, facing the camera; the plant building and the red-and-white striped ventilation stack rise behind her.
 [SPEECH] Vera looks into the camera and says aloud in Russian, once, in a natural adult female voice, quiet and tense, almost confidential: "Видите здание за моей спиной? Через несколько минут реактор в нём взорвётся." She speaks Russian only. Her lips and jaw move naturally with each Russian word. She starts speaking at about 0.5 seconds and finishes before the end of the clip.
 [EVENT BEHIND HER] The plant is calm: lit windows, a thin plume of steam from a vent, two workers in dark work clothes walk slowly along the turbine hall; nothing explodes.
@@ -20,10 +21,11 @@
 ```
 
 ## Клип 02 — Ночная смена в блочном щите · 8 с · Veo 3.1 Fast · Ingredients · 8 с · только промпт
+Ingredients: лицо + костюм + `loc_control_room.png`
 Реплика (15 слов, ≈ 6,2 с): «Двадцать шестое апреля восемьдесят шестого. Четвёртый блок перед ремонтом, и ночью на нём проводят испытание.»
 ```
 [SCENE] Immersion: Vera stands inside the unit 4 control room and speaks to the camera while the night shift prepares a test behind her; nobody notices her.
-[REFERENCES] Use the uploaded face image as Vera's exact identity and the uploaded costume image as her exact outfit. Keep identical in every frame: adult woman about 25, grey-green eyes, small mole under the eye, light freckles, dark-brown shoulder-length wavy hair, natural slim adult proportions; long dark worn coat, wine-red scarf, brass compass-rose brooch, dark waistcoat, light shirt.
+[REFERENCES] Use the uploaded face image as Vera's exact identity and the uploaded costume image as her exact outfit. Keep identical in every frame: adult woman about 25, grey-green eyes, small mole under the eye, light freckles, dark-brown shoulder-length wavy hair, natural slim adult proportions; long dark worn coat, wine-red scarf, brass compass-rose brooch, dark waistcoat, light shirt. Use the uploaded location image as the exact look of the control room.
 [VERA] Vera is the main character and stays clearly visible from the first to the last frame, face readable. Mid-ground, left third of the frame, facing the camera; the long control desks and three operators are to her right and behind her.
 [SPEECH] Vera looks into the camera and says aloud in Russian, once, in a natural adult female voice, calm and matter-of-fact, with a hint of unease: "Двадцать шестое апреля восемьдесят шестого. Четвёртый блок перед ремонтом, и ночью на нём проводят испытание." She speaks Russian only. Her lips and jaw move naturally with each Russian word. She starts speaking at about 0.4 seconds and finishes before the end of the clip.
 [EVENT BEHIND HER] Three operators in white cotton lab coats and white caps work at the long control desk: one watches the gauges, one flips a switch, one leans toward a colleague; none of them looks at Vera.
@@ -37,10 +39,11 @@
 ```
 
 ## Клип 03 — Опасный режим реактора · 10 с · Gemini Omni Flash 1.1 · Ingredients · 10 с · только промпт
+Ingredients: лицо + костюм + `loc_control_room.png`
 Реплика (19 слов, ≈ 7,9 с): «Но реактор уже в опасном режиме: мощность упала слишком низко. А в этом режиме такой реактор может резко разогнаться.»
 ```
 [SCENE] Rising tension: Vera explains to the camera that the reactor is in a dangerous state while warning lamps start to blink behind her.
-[REFERENCES] Use the uploaded face image as Vera's exact identity and the uploaded costume image as her exact outfit. Keep identical in every frame: adult woman about 25, grey-green eyes, small mole under the eye, light freckles, dark-brown shoulder-length wavy hair, natural slim adult proportions; long dark worn coat, wine-red scarf, brass compass-rose brooch, dark waistcoat, light shirt.
+[REFERENCES] Use the uploaded face image as Vera's exact identity and the uploaded costume image as her exact outfit. Keep identical in every frame: adult woman about 25, grey-green eyes, small mole under the eye, light freckles, dark-brown shoulder-length wavy hair, natural slim adult proportions; long dark worn coat, wine-red scarf, brass compass-rose brooch, dark waistcoat, light shirt. Use the uploaded location image as the exact look of the control room.
 [VERA] Vera is the main character and stays clearly visible from the first to the last frame, face readable. Medium close-up, right half of the frame, facing the camera; the blinking wall panel and the operators are visible over her shoulder.
 [SPEECH] Vera looks into the camera and says aloud in Russian, once, in a natural adult female voice, worried, explaining simply and clearly: "Но реактор уже в опасном режиме: мощность упала слишком низко. А в этом режиме такой реактор может резко разогнаться." She speaks Russian only. Her lips and jaw move naturally with each Russian word. She starts speaking at about 0.5 seconds and finishes before the end of the clip.
 [EVENT BEHIND HER] Behind her several lamps on the circular wall panel start to blink, the needle of a round gauge twitches, an operator leans in toward the desk.
@@ -54,10 +57,11 @@
 ```
 
 ## Клип 04 — Кнопка аварийной остановки · 8 с · Veo 3.1 Fast · Ingredients · 8 с · только промпт
+Ingredients: лицо + костюм + `loc_control_room.png`
 Реплика (15 слов, ≈ 6,2 с): «Час двадцать три. Оператор нажимает кнопку аварийной остановки. Почему именно сейчас — так и не выяснили.»
 ```
 [SCENE] Turning point: Vera speaks to the camera while, behind her, an operator presses the emergency shutdown button.
-[REFERENCES] Use the uploaded face image as Vera's exact identity and the uploaded costume image as her exact outfit. Keep identical in every frame: adult woman about 25, grey-green eyes, small mole under the eye, light freckles, dark-brown shoulder-length wavy hair, natural slim adult proportions; long dark worn coat, wine-red scarf, brass compass-rose brooch, dark waistcoat, light shirt.
+[REFERENCES] Use the uploaded face image as Vera's exact identity and the uploaded costume image as her exact outfit. Keep identical in every frame: adult woman about 25, grey-green eyes, small mole under the eye, light freckles, dark-brown shoulder-length wavy hair, natural slim adult proportions; long dark worn coat, wine-red scarf, brass compass-rose brooch, dark waistcoat, light shirt. Use the uploaded location image as the exact look of the control room.
 [VERA] Vera is the main character and stays clearly visible from the first to the last frame, face readable. Foreground, left third of the frame, facing the camera; in the mid-ground behind her right shoulder a young operator stands at the control desk.
 [SPEECH] Vera looks into the camera and says aloud in Russian, once, in a natural adult female voice, tense and quiet; on the second sentence she glances back at the operator, then looks into the camera again: "Час двадцать три. Оператор нажимает кнопку аварийной остановки. Почему именно сейчас — так и не выяснили." She speaks Russian only. Her lips and jaw move naturally with each Russian word. She starts speaking at about 0.4 seconds and finishes before the end of the clip.
 [EVENT BEHIND HER] A young operator in a white lab coat and cap firmly presses a single large square push-button on the control desk; two colleagues turn toward him.
@@ -71,10 +75,11 @@
 ```
 
 ## Клип 05 — Стержни разгоняют реактор · 8 с · Veo 3.1 Fast · Ingredients · 8 с · только промпт
+Ingredients: лицо + костюм + `loc_control_room.png`
 Реплика (15 слов, ≈ 6,2 с): «Стержни должны заглушить реактор. Но из-за их устройства в первые секунды они его разгоняют.»
 ```
 [SCENE] Escalation: the control room starts to shake behind Vera as the power surges; she speaks to the camera, frightened.
-[REFERENCES] Use the uploaded face image as Vera's exact identity and the uploaded costume image as her exact outfit. Keep identical in every frame: adult woman about 25, grey-green eyes, small mole under the eye, light freckles, dark-brown shoulder-length wavy hair, natural slim adult proportions; long dark worn coat, wine-red scarf, brass compass-rose brooch, dark waistcoat, light shirt.
+[REFERENCES] Use the uploaded face image as Vera's exact identity and the uploaded costume image as her exact outfit. Keep identical in every frame: adult woman about 25, grey-green eyes, small mole under the eye, light freckles, dark-brown shoulder-length wavy hair, natural slim adult proportions; long dark worn coat, wine-red scarf, brass compass-rose brooch, dark waistcoat, light shirt. Use the uploaded location image as the exact look of the control room.
 [VERA] Vera is the main character and stays clearly visible from the first to the last frame, face readable. Mid-ground, centred, facing the camera, one hand gripping the edge of a control desk; operators and the blinking panel behind her.
 [SPEECH] Vera looks into the camera and says aloud in Russian, once, in a natural adult female voice, frightened, faster, breath catching: "Стержни должны заглушить реактор. Но из-за их устройства в первые секунды они его разгоняют." She speaks Russian only. Her lips and jaw move naturally with each Russian word. She starts speaking at about 0.3 seconds and finishes before the end of the clip.
 [EVENT BEHIND HER] The room begins to tremble: lamps flicker, gauge needles swing to the limit, the operators jump up from their seats, dust falls from the ceiling.
@@ -88,10 +93,11 @@
 ```
 
 ## Клип 06 — Два взрыва · 8 с · Veo 3.1 Fast · Ingredients · 8 с · только промпт
+Ingredients: лицо + костюм + `loc_unit4_night.png`
 Реплика (12 слов, ≈ 5,0 с): «Два взрыва. Крышу реакторного зала разносит, раскалённые обломки летят на соседние здания.»
 ```
 [SCENE] Climax: two explosions tear through the unit 4 reactor building behind Vera; she speaks to the camera in shock.
-[REFERENCES] Use the uploaded face image as Vera's exact identity and the uploaded costume image as her exact outfit. Keep identical in every frame: adult woman about 25, grey-green eyes, small mole under the eye, light freckles, dark-brown shoulder-length wavy hair, natural slim adult proportions; long dark worn coat, wine-red scarf, brass compass-rose brooch, dark waistcoat, light shirt.
+[REFERENCES] Use the uploaded face image as Vera's exact identity and the uploaded costume image as her exact outfit. Keep identical in every frame: adult woman about 25, grey-green eyes, small mole under the eye, light freckles, dark-brown shoulder-length wavy hair, natural slim adult proportions; long dark worn coat, wine-red scarf, brass compass-rose brooch, dark waistcoat, light shirt. Use the uploaded location image as the exact look of the power plant buildings and the setting.
 [VERA] Vera is the main character and stays clearly visible from the first to the last frame, face readable. Foreground, right third of the frame, facing the camera at a safe distance from the plant; the explosions happen in the upper left behind her.
 [SPEECH] Vera looks into the camera and says aloud in Russian, once, in a natural adult female voice, shocked, breathless; she flinches at the first blast, then speaks: "Два взрыва. Крышу реакторного зала разносит, раскалённые обломки летят на соседние здания." She speaks Russian only. Her lips and jaw move naturally with each Russian word. She starts speaking at about 0.8 seconds and finishes before the end of the clip.
 [EVENT BEHIND HER] A first bright burst of steam and debris erupts from the roof of the unit 4 reactor building; two seconds later a second, larger blast throws glowing fragments high into the night sky; a column of smoke and steam rises beside the striped stack.
@@ -105,10 +111,11 @@
 ```
 
 ## Клип 07 — Реактор разрушен · 8 с · Veo 3.1 Fast · Ingredients · 8 с · только промпт
+Ingredients: лицо + костюм + `loc_unit4_night.png`
 Реплика (12 слов, ≈ 5,0 с): «Реактор разрушен. На крышах пожар. А радиацию не видно и не слышно.»
 ```
 [SCENE] Aftermath of the blast: Vera speaks to the camera in front of the wrecked, burning unit 4.
-[REFERENCES] Use the uploaded face image as Vera's exact identity and the uploaded costume image as her exact outfit. Keep identical in every frame: adult woman about 25, grey-green eyes, small mole under the eye, light freckles, dark-brown shoulder-length wavy hair, natural slim adult proportions; long dark worn coat, wine-red scarf, brass compass-rose brooch, dark waistcoat, light shirt.
+[REFERENCES] Use the uploaded face image as Vera's exact identity and the uploaded costume image as her exact outfit. Keep identical in every frame: adult woman about 25, grey-green eyes, small mole under the eye, light freckles, dark-brown shoulder-length wavy hair, natural slim adult proportions; long dark worn coat, wine-red scarf, brass compass-rose brooch, dark waistcoat, light shirt. Use the uploaded location image as the exact look of the power plant buildings and the setting.
 [VERA] Vera is the main character and stays clearly visible from the first to the last frame, face readable. Mid-ground, lower centre, facing the camera; the wrecked top of unit 4 and the burning turbine hall roof behind her.
 [SPEECH] Vera looks into the camera and says aloud in Russian, once, in a natural adult female voice, shaken, quiet and abrupt: "Реактор разрушен. На крышах пожар. А радиацию не видно и не слышно." She speaks Russian only. Her lips and jaw move naturally with each Russian word. She starts speaking at about 0.4 seconds and finishes before the end of the clip.
 [EVENT BEHIND HER] A red glow rises from the open, wrecked top of the unit 4 building; several fires burn across the flat roof of the turbine hall, sparks drift, smoke flows toward the striped stack.
@@ -122,10 +129,11 @@
 ```
 
 ## Клип 08 — Приезжают пожарные · 8 с · Veo 3.1 Fast · Ingredients · 8 с · только промпт
+Ingredients: лицо + костюм + `ref_firefighter.png`
 Реплика (12 слов, ≈ 5,0 с): «Первыми приезжают пожарные. Они поднимаются на крыши — совсем рядом с открытым реактором.»
 ```
 [SCENE] Response: firefighters arrive and run past behind Vera toward the burning building; she speaks to the camera.
-[REFERENCES] Use the uploaded face image as Vera's exact identity and the uploaded costume image as her exact outfit. Keep identical in every frame: adult woman about 25, grey-green eyes, small mole under the eye, light freckles, dark-brown shoulder-length wavy hair, natural slim adult proportions; long dark worn coat, wine-red scarf, brass compass-rose brooch, dark waistcoat, light shirt.
+[REFERENCES] Use the uploaded face image as Vera's exact identity and the uploaded costume image as her exact outfit. Keep identical in every frame: adult woman about 25, grey-green eyes, small mole under the eye, light freckles, dark-brown shoulder-length wavy hair, natural slim adult proportions; long dark worn coat, wine-red scarf, brass compass-rose brooch, dark waistcoat, light shirt. Use the uploaded firefighter image as the exact look of the firefighters' uniforms.
 [VERA] Vera is the main character and stays clearly visible from the first to the last frame, face readable. Foreground, left third of the frame, facing the camera; the fire engines and firefighters move behind her.
 [SPEECH] Vera looks into the camera and says aloud in Russian, once, in a natural adult female voice, anxious and compassionate: "Первыми приезжают пожарные. Они поднимаются на крыши — совсем рядом с открытым реактором." She speaks Russian only. Her lips and jaw move naturally with each Russian word. She starts speaking at about 0.4 seconds and finishes before the end of the clip.
 [EVENT BEHIND HER] Two red Soviet fire engines brake near the turbine hall; firefighters in dark canvas turnout coats and helmets jump out, pull hoses and run toward a vertical steel ladder on the wall; fire glows on the roof above.
@@ -139,10 +147,11 @@
 ```
 
 ## Клип 09 — Огонь сбит — цена · 8 с · Veo 3.1 Fast · Ingredients · 8 с · только промпт
+Ingredients: лицо + костюм + `ref_firefighter.png`
 Реплика (15 слов, ≈ 6,2 с): «Огонь на крышах сбивают за несколько часов. Но шестеро пожарных потом умрут от лучевой болезни.»
 ```
 [SCENE] Resolution of the night: behind Vera, firefighters on the roof put out the fires as dawn approaches; she speaks to the camera.
-[REFERENCES] Use the uploaded face image as Vera's exact identity and the uploaded costume image as her exact outfit. Keep identical in every frame: adult woman about 25, grey-green eyes, small mole under the eye, light freckles, dark-brown shoulder-length wavy hair, natural slim adult proportions; long dark worn coat, wine-red scarf, brass compass-rose brooch, dark waistcoat, light shirt.
+[REFERENCES] Use the uploaded face image as Vera's exact identity and the uploaded costume image as her exact outfit. Keep identical in every frame: adult woman about 25, grey-green eyes, small mole under the eye, light freckles, dark-brown shoulder-length wavy hair, natural slim adult proportions; long dark worn coat, wine-red scarf, brass compass-rose brooch, dark waistcoat, light shirt. Use the uploaded firefighter image as the exact look of the firefighters' uniforms.
 [VERA] Vera is the main character and stays clearly visible from the first to the last frame, face readable. Foreground, lower third, below roof level, facing the camera; the firefighters are on the roof above and behind her.
 [SPEECH] Vera looks into the camera and says aloud in Russian, once, in a natural adult female voice, quiet pain, slower: "Огонь на крышах сбивают за несколько часов. Но шестеро пожарных потом умрут от лучевой болезни." She speaks Russian only. Her lips and jaw move naturally with each Russian word. She starts speaking at about 0.4 seconds and finishes before the end of the clip.
 [EVENT BEHIND HER] Four firefighters in silhouette stand on the high flat roof and direct two canvas hoses at the fire; during the clip the flames weaken and the sky begins to pale before dawn; smoke rises past the red-and-white striped stack.
@@ -156,10 +165,11 @@
 ```
 
 ## Клип 10 — Обычная суббота в Припяти · 8 с · Veo 3.1 Fast · Ingredients · 8 с · только промпт
+Ingredients: лицо + костюм + `loc_pripyat_street.png`
 Реплика (10 слов, ≈ 4,2 с): «Утро. В Припяти обычная суббота. Об аварии городу не сказали.»
 ```
 [SCENE] Contrast: an ordinary Saturday morning in Pripyat while smoke rises over the distant plant; Vera speaks to the camera.
-[REFERENCES] Use the uploaded face image as Vera's exact identity and the uploaded costume image as her exact outfit. Keep identical in every frame: adult woman about 25, grey-green eyes, small mole under the eye, light freckles, dark-brown shoulder-length wavy hair, natural slim adult proportions; long dark worn coat, wine-red scarf, brass compass-rose brooch, dark waistcoat, light shirt.
+[REFERENCES] Use the uploaded face image as Vera's exact identity and the uploaded costume image as her exact outfit. Keep identical in every frame: adult woman about 25, grey-green eyes, small mole under the eye, light freckles, dark-brown shoulder-length wavy hair, natural slim adult proportions; long dark worn coat, wine-red scarf, brass compass-rose brooch, dark waistcoat, light shirt. Use the uploaded location image as the exact look of the Pripyat street.
 [VERA] Vera is the main character and stays clearly visible from the first to the last frame, face readable. Mid-ground, lower left third, by a bus stop, facing the camera; passers-by walk behind her, a thin smoke plume on the horizon to the right.
 [SPEECH] Vera looks into the camera and says aloud in Russian, once, in a natural adult female voice, bitter calm, slow: "Утро. В Припяти обычная суббота. Об аварии городу не сказали." She speaks Russian only. Her lips and jaw move naturally with each Russian word. She starts speaking at about 0.4 seconds and finishes before the end of the clip.
 [EVENT BEHIND HER] An ordinary morning: a woman with a shopping bag, a father with a pram and two men chatting walk calmly behind her; pigeons on the pavement; far beyond the rooftops a thin grey smoke plume rises over the power plant.
@@ -173,10 +183,11 @@
 ```
 
 ## Клип 11 — Эвакуация · 8 с · Veo 3.1 Fast · Ingredients · 8 с · только промпт
+Ingredients: лицо + костюм + `loc_pripyat_street.png`
 Реплика (14 слов, ≈ 5,8 с): «На следующий день к домам подают автобусы. Уезжают около пятидесяти тысяч человек. Говорят — временно.»
 ```
 [SCENE] Consequence: residents board a long column of evacuation buses behind Vera; she speaks to the camera.
-[REFERENCES] Use the uploaded face image as Vera's exact identity and the uploaded costume image as her exact outfit. Keep identical in every frame: adult woman about 25, grey-green eyes, small mole under the eye, light freckles, dark-brown shoulder-length wavy hair, natural slim adult proportions; long dark worn coat, wine-red scarf, brass compass-rose brooch, dark waistcoat, light shirt.
+[REFERENCES] Use the uploaded face image as Vera's exact identity and the uploaded costume image as her exact outfit. Keep identical in every frame: adult woman about 25, grey-green eyes, small mole under the eye, light freckles, dark-brown shoulder-length wavy hair, natural slim adult proportions; long dark worn coat, wine-red scarf, brass compass-rose brooch, dark waistcoat, light shirt. Use the uploaded location image as the exact look of the Pripyat street.
 [VERA] Vera is the main character and stays clearly visible from the first to the last frame, face readable. Foreground right, facing the camera; the bus column recedes into the depth on the left behind her.
 [SPEECH] Vera looks into the camera and says aloud in Russian, once, in a natural adult female voice, sad and restrained: "На следующий день к домам подают автобусы. Уезжают около пятидесяти тысяч человек. Говорят — временно." She speaks Russian only. Her lips and jaw move naturally with each Russian word. She starts speaking at about 0.3 seconds and finishes before the end of the clip.
 [EVENT BEHIND HER] A long column of yellow and cream Soviet city buses stands along the street; residents with small bags and suitcases quietly walk to the doors and board, a mother leads a child by the hand, a policeman in a grey 1980s Soviet militia uniform stands by a door; the first bus starts to move.
@@ -190,10 +201,11 @@
 ```
 
 ## Клип 12 — Не одна кнопка (финал) · 10 с · Gemini Omni Flash 1.1 · Ingredients · 10 с · только промпт
+Ingredients: лицо + костюм + `loc_pripyat_street.png`
 Реплика (20 слов, ≈ 8,3 с): «Виновата не одна кнопка, а изъян реактора и нарушения при испытании. Город, которому было шестнадцать лет, пустует до сих пор.»
 ```
 [SCENE] Final: Vera alone in the empty, evacuated city speaks to the camera.
-[REFERENCES] Use the uploaded face image as Vera's exact identity and the uploaded costume image as her exact outfit. Keep identical in every frame: adult woman about 25, grey-green eyes, small mole under the eye, light freckles, dark-brown shoulder-length wavy hair, natural slim adult proportions; long dark worn coat, wine-red scarf, brass compass-rose brooch, dark waistcoat, light shirt.
+[REFERENCES] Use the uploaded face image as Vera's exact identity and the uploaded costume image as her exact outfit. Keep identical in every frame: adult woman about 25, grey-green eyes, small mole under the eye, light freckles, dark-brown shoulder-length wavy hair, natural slim adult proportions; long dark worn coat, wine-red scarf, brass compass-rose brooch, dark waistcoat, light shirt. Use the uploaded location image as the exact look of the Pripyat street.
 [VERA] Vera is the main character and stays clearly visible from the first to the last frame, face readable. Mid-ground, centred, in the middle of the empty street, facing the camera; apartment blocks with dark windows behind her.
 [SPEECH] Vera looks into the camera and says aloud in Russian, once, in a natural adult female voice, quiet and firm, no pathos: "Виновата не одна кнопка, а изъян реактора и нарушения при испытании. Город, которому было шестнадцать лет, пустует до сих пор." She speaks Russian only. Her lips and jaw move naturally with each Russian word. She starts speaking at about 0.5 seconds and finishes before the end of the clip.
 [EVENT BEHIND HER] The city is empty after the evacuation: dark windows, an empty bus stop, the wind pushes fallen leaves along the pavement; no other people; the buildings are intact.
