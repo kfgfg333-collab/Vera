@@ -1,6 +1,6 @@
-# Клипы Google Flow — EP01 (версия 8, 27.10.2026)
+# Клипы Google Flow — EP01 (версия 9, 27.10.2026)
 
-Персонаж **Vera** + картинка локации; Gemini Omni Flash 1.1 · Ingredients; русская речь голосом персонажа; рисованный стиль; жутковатое настроение; живой фон. Локации 02–05: машзал → центральный зал реактора → блочный щит → центральный зал (крышки прыгают — 🎭 по рассказам очевидцев). Рабочий документ — `EP01_Чернобыль_Рабочие_промпты.docx`.
+Персонаж **Vera** + своя картинка локации почти в каждом клипе; Gemini Omni Flash 1.1 · Ingredients; русская речь; рисованный стиль; жутковатое настроение; живой фон. Узнаваемая Припять: площадь с ДК «Энергетик» и гостиницей «Полесье», проспект с высотками, колесо обозрения (финал — наши дни). Рабочий документ — `EP01_Чернобыль_Рабочие_промпты.docx`.
 
 ## Клип 01 — Здание за спиной (крючок) · 8 с · клип создан пользователем по прежнему промпту
 Ingredients: @Vera (персонаж) + @loc_unit4_night.png
@@ -93,16 +93,16 @@ Ingredients: @Vera (персонаж) + @loc_reactor_hall.png
 ```
 
 ## Клип 06 — Два взрыва · 8 с · только промпт
-Ingredients: @Vera (персонаж) + @loc_unit4_night.png
+Ingredients: @Vera (персонаж) + @loc_cooling_pond.png
 Реплика (12 слов): «Два взрыва. Крышу реакторного зала разносит, раскалённые обломки летят на соседние здания.»
 ```
 [STYLE — MOST IMPORTANT] Stylized 3D animated feature-film look with a hand-painted, painterly texture — exactly the same drawn, illustrated style as the @Vera character images. Soft painted shading, slightly simplified stylized forms, smooth painted skin without pores, visible brush-like texture in hair, clothes and background. This is an animated cartoon-film frame, NOT live action, NOT a photograph, NOT photorealistic, NOT a real human actor. Mood: pure shock and horror, the moment the night breaks.
-[SCENE] Climax: two explosions tear apart the unit 4 reactor building behind Vera.
-[REFERENCES] Vera is the character @Vera — keep her face, body, outfit, art style and voice exactly as in the character images, in every frame. Do not make her more realistic than the character images. Use @loc_unit4_night as the setting, painted in the same animated style.
-[VERA] Vera is the main character and stays clearly visible from the first to the last frame, face readable. She stands on the plant road facing the camera; the first blast makes her flinch and crouch, hair blown by the shockwave; she straightens, pale, and speaks to the camera. Long dark worn coat, wine-red scarf, brass compass-rose brooch, dark waistcoat, light shirt.
+[SCENE] Climax: from the bank of the plant's cooling pond Vera sees two explosions tear apart the unit 4 reactor building across the water.
+[REFERENCES] Vera is the character @Vera — keep her face, body, outfit, art style and voice exactly as in the character images, in every frame. Do not make her more realistic than the character images. Use @loc_cooling_pond as the setting, painted in the same animated style.
+[VERA] Vera is the main character and stays clearly visible from the first to the last frame, face readable. She stands on the concrete bank of the cooling pond facing the camera; the first blast makes her flinch and crouch, hair blown by the shockwave; she straightens, pale, and speaks to the camera. Long dark worn coat, wine-red scarf, brass compass-rose brooch, dark waistcoat, light shirt.
 [SPEECH] Vera says aloud in Russian, once, in her own character voice, shocked, breathless, almost whispering: "Два взрыва. Крышу реакторного зала разносит, раскалённые обломки летят на соседние здания." Russian only. Her lips and jaw move naturally with every Russian word. She starts at about 0.8 seconds and finishes before the end of the clip.
-[BACKGROUND ACTION — constant, unsettling movement] Behind her a bright burst of steam and debris erupts from the roof of the unit 4 building; two seconds later a second, larger blast throws a column of fire and glowing fragments high into the black sky; a shockwave ripples through the fog, windows of the turbine hall burst outward, burning pieces arc down onto nearby roofs, sparks and dust sweep past Vera, street lamps die one after another.
-[SETTING & ERA] Night of 26 April 1986, about 1:24 a.m., Chernobyl plant.
+[BACKGROUND ACTION — constant, unsettling movement] Behind her, across the dark still water, two night fishermen with rods jump up in fright; on the far shore a bright burst of steam and debris erupts from the roof of the unit 4 building; two seconds later a second, larger blast throws a column of fire and glowing fragments high into the black sky; the fiery column is reflected and shattered in the water, a shockwave ripples across the pond surface and through the fog, burning pieces arc down onto the plant roofs, the lights along the far shore die one after another.
+[SETTING & ERA] Night of 26 April 1986, about 1:24 a.m., bank of the cooling pond of the Chernobyl plant, the plant on the opposite shore.
 [CAMERA] Wide shot with Vera in the lower right foreground, camera shaking hard on each blast, then a slow push-in toward her. Vertical 9:16, Vera and the action both clearly visible.
 [LIGHT] Darkness broken by blinding orange-white flashes, then a deep red glow on her face — stylized, soft, like an animated film.
 [AUDIO] Only Vera's Russian line in her character voice, plus eerie ambient sound: two deep booms two seconds apart, shattering glass, a ringing silence, then rumbling and falling debris.
@@ -111,16 +111,16 @@ Ingredients: @Vera (персонаж) + @loc_unit4_night.png
 ```
 
 ## Клип 07 — Реактор разрушен · 8 с · только промпт
-Ingredients: @Vera (персонаж) + @loc_unit4_night.png
+Ingredients: @Vera (персонаж) + @loc_unit4_ruins.png
 Реплика (12 слов): «Реактор разрушен. На крышах пожар. А радиацию не видно и не слышно.»
 ```
 [STYLE — MOST IMPORTANT] Stylized 3D animated feature-film look with a hand-painted, painterly texture — exactly the same drawn, illustrated style as the @Vera character images. Soft painted shading, slightly simplified stylized forms, smooth painted skin without pores, visible brush-like texture in hair, clothes and background. This is an animated cartoon-film frame, NOT live action, NOT a photograph, NOT photorealistic, NOT a real human actor. Mood: haunting, nightmarish, an invisible danger in the air.
-[SCENE] Aftermath of the blast: Vera walks through swirling embers in front of the wrecked, glowing unit 4.
-[REFERENCES] Vera is the character @Vera — keep her face, body, outfit, art style and voice exactly as in the character images, in every frame. Do not make her more realistic than the character images. Use @loc_unit4_night as the setting, painted in the same animated style.
-[VERA] Vera is the main character and stays clearly visible from the first to the last frame, face readable. She walks slowly toward the camera through drifting embers and smoke, shields her eyes once, then stops and looks into the lens, shaken. Long dark worn coat, wine-red scarf, brass compass-rose brooch, dark waistcoat, light shirt.
+[SCENE] Aftermath of the blast: Vera walks through the debris field right at the foot of the wrecked, glowing unit 4.
+[REFERENCES] Vera is the character @Vera — keep her face, body, outfit, art style and voice exactly as in the character images, in every frame. Do not make her more realistic than the character images. Use @loc_unit4_ruins as the setting, painted in the same animated style.
+[VERA] Vera is the main character and stays clearly visible from the first to the last frame, face readable. She picks her way toward the camera between smoking chunks of concrete, twisted metal and scattered dark graphite blocks, shields her eyes once, then stops and looks into the lens, shaken. Long dark worn coat, wine-red scarf, brass compass-rose brooch, dark waistcoat, light shirt.
 [SPEECH] Vera says aloud in Russian, once, in her own character voice, quiet and abrupt, the last sentence slow and chilling: "Реактор разрушен. На крышах пожар. А радиацию не видно и не слышно." Russian only. Her lips and jaw move naturally with every Russian word. She starts at about 0.4 seconds and finishes before the end of the clip.
 [BACKGROUND ACTION — constant, unsettling movement] Behind her the open, wrecked top of unit 4 glows with an eerie red light and a faint pale haze rises above it; fires spread across the turbine hall roof; burning fragments crackle on the ground; thick smoke rolls across the frame; two plant workers run past in panic; ash falls slowly like dark snow; far away the first blue flashing lights appear.
-[SETTING & ERA] Night of 26 April 1986, about 1:30 a.m., Chernobyl plant.
+[SETTING & ERA] Night of 26 April 1986, about 1:30 a.m., at the foot of the destroyed unit 4 building, Chernobyl plant, ground covered with debris.
 [CAMERA] Handheld tracking shot moving backward in front of Vera, smoke drifting between her and the camera, then a slow push-in on her face. Vertical 9:16, Vera and the action both clearly visible.
 [LIGHT] Red-orange firelight flickering on her face, black smoke, falling ash, cold blue flashes in the distance — stylized, soft, like an animated film.
 [AUDIO] Only Vera's Russian line in her character voice, plus eerie ambient sound: crackling fire, popping embers, a low unsettling hum, a distant siren growing louder.
@@ -129,16 +129,16 @@ Ingredients: @Vera (персонаж) + @loc_unit4_night.png
 ```
 
 ## Клип 08 — Приезжают пожарные · 8 с · только промпт
-Ingredients: @Vera (персонаж) + @loc_unit4_night.png + @ref_firefighter.png
+Ingredients: @Vera (персонаж) + @loc_turbine_wall.png + @ref_firefighter.png
 Реплика (12 слов): «Первыми приезжают пожарные. Они поднимаются на крыши — совсем рядом с открытым реактором.»
 ```
 [STYLE — MOST IMPORTANT] Stylized 3D animated feature-film look with a hand-painted, painterly texture — exactly the same drawn, illustrated style as the @Vera character images. Soft painted shading, slightly simplified stylized forms, smooth painted skin without pores, visible brush-like texture in hair, clothes and background. This is an animated cartoon-film frame, NOT live action, NOT a photograph, NOT photorealistic, NOT a real human actor. Mood: desperate urgency with a sense of doom — brave people running toward danger they cannot see.
 [SCENE] Response: fire engines rush in and firefighters run past behind Vera toward the burning building.
-[REFERENCES] Vera is the character @Vera — keep her face, body, outfit, art style and voice exactly as in the character images, in every frame. Do not make her more realistic than the character images. Use @loc_unit4_night as the setting, painted in the same animated style. Use @ref_firefighter as the exact look of the firefighters, in the same animated style.
+[REFERENCES] Vera is the character @Vera — keep her face, body, outfit, art style and voice exactly as in the character images, in every frame. Do not make her more realistic than the character images. Use @loc_turbine_wall as the setting, painted in the same animated style. Use @ref_firefighter as the exact look of the firefighters, in the same animated style.
 [VERA] Vera is the main character and stays clearly visible from the first to the last frame, face readable. She stands in the left foreground and turns her face to the camera as the trucks race in behind her; her eyes follow the firefighters with dread. Long dark worn coat, wine-red scarf, brass compass-rose brooch, dark waistcoat, light shirt.
 [SPEECH] Vera says aloud in Russian, once, in her own character voice, anxious and compassionate, voice tight: "Первыми приезжают пожарные. Они поднимаются на крыши — совсем рядом с открытым реактором." Russian only. Her lips and jaw move naturally with every Russian word. She starts at about 0.4 seconds and finishes before the end of the clip.
 [BACKGROUND ACTION — constant, unsettling movement] Two red Soviet fire engines with blue flashing lights race in and brake hard behind her; firefighters in dark canvas turnout coats and helmets jump out, unroll hoses across the concrete, shout without audible words, run to a tall steel ladder on the wall and start climbing into the smoke; above them fire and dark smoke pour from the roof; ash falls around them.
-[SETTING & ERA] Night of 26 April 1986, about 1:30 a.m., beside the turbine hall of the Chernobyl plant.
+[SETTING & ERA] Night of 26 April 1986, about 1:30 a.m., at the long outer wall of the turbine hall with a tall steel fire ladder, Chernobyl plant.
 [CAMERA] Smooth fast pan from right to left following the trucks, settling on Vera in the left foreground, then a slow tilt up the ladder into the smoke. Vertical 9:16, Vera and the action both clearly visible.
 [LIGHT] Blue flashing lights cutting through smoke, orange firelight from above, deep shadows — stylized, soft, like an animated film.
 [AUDIO] Only Vera's Russian line in her character voice, plus eerie ambient sound: engines, brakes, boots on concrete, hoses unrolling, fire roaring above, a low ominous hum.
@@ -147,17 +147,17 @@ Ingredients: @Vera (персонаж) + @loc_unit4_night.png + @ref_firefighter.
 ```
 
 ## Клип 09 — Огонь сбит — цена · 8 с · только промпт
-Ingredients: @Vera (персонаж) + @loc_unit4_night.png + @ref_firefighter.png
+Ingredients: @Vera (персонаж) + @loc_roof.png + @ref_firefighter.png
 Реплика (15 слов): «Огонь на крышах сбивают за несколько часов. Но шестеро пожарных потом умрут от лучевой болезни.»
 ```
 [STYLE — MOST IMPORTANT] Stylized 3D animated feature-film look with a hand-painted, painterly texture — exactly the same drawn, illustrated style as the @Vera character images. Soft painted shading, slightly simplified stylized forms, smooth painted skin without pores, visible brush-like texture in hair, clothes and background. This is an animated cartoon-film frame, NOT live action, NOT a photograph, NOT photorealistic, NOT a real human actor. Mood: tragic, mournful — the heavy silence after a terrible night.
-[SCENE] Resolution of the night: firefighters fight the fire on the roof above Vera as a grey dawn approaches.
-[REFERENCES] Vera is the character @Vera — keep her face, body, outfit, art style and voice exactly as in the character images, in every frame. Do not make her more realistic than the character images. Use @loc_unit4_night as the setting, painted in the same animated style. Use @ref_firefighter as the exact look of the firefighters, in the same animated style.
-[VERA] Vera is the main character and stays clearly visible from the first to the last frame, face readable. She stands at the foot of the building in the lower third, water mist and ash drifting around her, and speaks to the camera, eyes glistening. Long dark worn coat, wine-red scarf, brass compass-rose brooch, dark waistcoat, light shirt.
+[SCENE] Resolution of the night: Vera stands on the roof among the firefighters as they fight the last flames and a grey dawn approaches.
+[REFERENCES] Vera is the character @Vera — keep her face, body, outfit, art style and voice exactly as in the character images, in every frame. Do not make her more realistic than the character images. Use @loc_roof as the setting, painted in the same animated style. Use @ref_firefighter as the exact look of the firefighters, in the same animated style.
+[VERA] Vera is the main character and stays clearly visible from the first to the last frame, face readable. She stands on the flat bitumen roof in the lower third of the frame, water mist and ash drifting around her, and speaks to the camera, eyes glistening. Long dark worn coat, wine-red scarf, brass compass-rose brooch, dark waistcoat, light shirt.
 [SPEECH] Vera says aloud in Russian, once, in her own character voice, quiet pain, slower, the last sentence almost broken: "Огонь на крышах сбивают за несколько часов. Но шестеро пожарных потом умрут от лучевой болезни." Russian only. Her lips and jaw move naturally with every Russian word. She starts at about 0.4 seconds and finishes before the end of the clip.
-[BACKGROUND ACTION — constant, unsettling movement] On the roof above and behind her silhouettes of firefighters direct hose jets into the dying flames; water bursts into clouds of steam; one firefighter sways, sinks to his knees and is pulled back by another; the flames shrink during the clip while the sky turns from black to a cold, bruised pre-dawn blue; ash keeps falling.
-[SETTING & ERA] Early morning of 26 April 1986, Chernobyl plant.
-[CAMERA] Low-angle wide shot with Vera in the foreground, slow crane-like rise that reveals the roof, then settles back on her face. Vertical 9:16, Vera and the action both clearly visible.
+[BACKGROUND ACTION — constant, unsettling movement] Behind her on the same roof silhouettes of firefighters direct hose jets into the dying flames; water bursts into clouds of steam; one firefighter sways, sinks to his knees and is pulled back by another; the flames shrink during the clip while the sky turns from black to a cold, bruised pre-dawn blue; ash keeps falling.
+[SETTING & ERA] Early morning of 26 April 1986, flat roof of the turbine hall next to the red-and-white striped ventilation stack, Chernobyl plant.
+[CAMERA] Wide shot on the roof with Vera in the foreground, slow lateral move revealing the firefighters and the stack, then settles on her face. Vertical 9:16, Vera and the action both clearly visible.
 [LIGHT] Fading red glow turning into cold, colourless pre-dawn light, steam glowing faintly — stylized, soft, like an animated film.
 [AUDIO] Only Vera's Russian line in her character voice, plus eerie ambient sound: rushing water, hissing steam, dying fire, dripping water, then a heavy silence.
 [AVOID] No photorealism, no live-action look, no real-person faces, no skin pores or photographic detail; no shots without Vera; no static or frozen background; no monsters, no supernatural creatures; no English speech, no other voices speaking words, no extra lines, no music; no subtitles or on-screen text, no logos, no watermarks; no extra fingers, no face, style or outfit changes, no gratuitous gore.
@@ -165,16 +165,16 @@ Ingredients: @Vera (персонаж) + @loc_unit4_night.png + @ref_firefighter.
 ```
 
 ## Клип 10 — Обычная суббота в Припяти · 8 с · только промпт
-Ingredients: @Vera (персонаж) + @loc_pripyat_street.png
+Ingredients: @Vera (персонаж) + @loc_pripyat_square.png
 Реплика (10 слов): «Утро. В Припяти обычная суббота. Об аварии городу не сказали.»
 ```
 [STYLE — MOST IMPORTANT] Stylized 3D animated feature-film look with a hand-painted, painterly texture — exactly the same drawn, illustrated style as the @Vera character images. Soft painted shading, slightly simplified stylized forms, smooth painted skin without pores, visible brush-like texture in hair, clothes and background. This is an animated cartoon-film frame, NOT live action, NOT a photograph, NOT photorealistic, NOT a real human actor. Mood: deeply unsettling contrast — sunny ordinary life under an invisible threat.
-[SCENE] Contrast: a lively ordinary Saturday morning in Pripyat while a dark plume rises over the distant plant.
-[REFERENCES] Vera is the character @Vera — keep her face, body, outfit, art style and voice exactly as in the character images, in every frame. Do not make her more realistic than the character images. Use @loc_pripyat_street as the setting, painted in the same animated style.
-[VERA] Vera is the main character and stays clearly visible from the first to the last frame, face readable. She walks down the sidewalk toward the camera through the cheerful morning crowd, the only person who looks worried, and stops to speak to the lens. Long dark worn coat, wine-red scarf, brass compass-rose brooch, dark waistcoat, light shirt.
+[SCENE] Contrast: a lively ordinary Saturday morning on the central square of Pripyat while a dark plume rises over the distant plant.
+[REFERENCES] Vera is the character @Vera — keep her face, body, outfit, art style and voice exactly as in the character images, in every frame. Do not make her more realistic than the character images. Use @loc_pripyat_square as the setting, painted in the same animated style.
+[VERA] Vera is the main character and stays clearly visible from the first to the last frame, face readable. She walks across the square toward the camera through the cheerful morning crowd, the only person who looks worried, and stops to speak to the lens. Long dark worn coat, wine-red scarf, brass compass-rose brooch, dark waistcoat, light shirt.
 [SPEECH] Vera says aloud in Russian, once, in her own character voice, bitter calm, quiet: "Утро. В Припяти обычная суббота. Об аварии городу не сказали." Russian only. Her lips and jaw move naturally with every Russian word. She starts at about 0.4 seconds and finishes before the end of the clip.
-[BACKGROUND ACTION — constant, unsettling movement] Life goes on all around her: children ride bicycles past laughing, a mother pushes a pram, men carry shopping bags, a bus stops and people get off, pigeons burst up from the pavement, laundry flaps on balconies; nobody looks toward the horizon, where a thin dark plume rises over the plant; for a moment the shadow of a cloud passes over the street.
-[SETTING & ERA] Saturday morning, 26 April 1986, Pripyat, Ukrainian SSR, sunny and warm, white panel apartment blocks, young poplars.
+[BACKGROUND ACTION — constant, unsettling movement] Behind her the Palace of Culture «Energetik» and the tall Hotel «Polissya» frame the square; life goes on all around her: children ride bicycles past laughing, a mother pushes a pram, men carry shopping bags, a bus stops and people get off, pigeons burst up from the pavement, laundry flaps on balconies; nobody looks toward the horizon, where a thin dark plume rises over the plant; for a moment the shadow of a cloud passes over the street.
+[SETTING & ERA] Saturday morning, 26 April 1986, central square of Pripyat, Ukrainian SSR, sunny and warm: the Palace of Culture «Energetik», the Hotel «Polissya», flower beds, young poplars.
 [CAMERA] Handheld tracking shot moving backward in front of Vera, then a slow push-in as the dark plume becomes visible over her shoulder. Vertical 9:16, Vera and the action both clearly visible.
 [LIGHT] Bright warm sun on the street, but a cold shadow passes over Vera's face; the plume dark against the pale sky — stylized, soft, like an animated film.
 [AUDIO] Only Vera's Russian line in her character voice, plus eerie ambient sound: birds, children laughing, bicycle bells, a bus engine, distant voices without words, and under it all a faint low hum.
@@ -183,16 +183,16 @@ Ingredients: @Vera (персонаж) + @loc_pripyat_street.png
 ```
 
 ## Клип 11 — Эвакуация · 8 с · только промпт
-Ingredients: @Vera (персонаж) + @loc_pripyat_street.png
+Ingredients: @Vera (персонаж) + @loc_pripyat_avenue.png
 Реплика (14 слов): «На следующий день к домам подают автобусы. Уезжают около пятидесяти тысяч человек. Говорят — временно.»
 ```
 [STYLE — MOST IMPORTANT] Stylized 3D animated feature-film look with a hand-painted, painterly texture — exactly the same drawn, illustrated style as the @Vera character images. Soft painted shading, slightly simplified stylized forms, smooth painted skin without pores, visible brush-like texture in hair, clothes and background. This is an animated cartoon-film frame, NOT live action, NOT a photograph, NOT photorealistic, NOT a real human actor. Mood: quiet tragedy and unease — a whole city leaving and not knowing it is forever.
 [SCENE] Consequence: the evacuation of Pripyat in full motion around Vera.
-[REFERENCES] Vera is the character @Vera — keep her face, body, outfit, art style and voice exactly as in the character images, in every frame. Do not make her more realistic than the character images. Use @loc_pripyat_street as the setting, painted in the same animated style.
+[REFERENCES] Vera is the character @Vera — keep her face, body, outfit, art style and voice exactly as in the character images, in every frame. Do not make her more realistic than the character images. Use @loc_pripyat_avenue as the setting, painted in the same animated style.
 [VERA] Vera is the main character and stays clearly visible from the first to the last frame, face readable. She walks against the flow of people toward the camera and speaks to the lens, sad and tense. Long dark worn coat, wine-red scarf, brass compass-rose brooch, dark waistcoat, light shirt.
 [SPEECH] Vera says aloud in Russian, once, in her own character voice, sad and restrained, the last word lingering: "На следующий день к домам подают автобусы. Уезжают около пятидесяти тысяч человек. Говорят — временно." Russian only. Her lips and jaw move naturally with every Russian word. She starts at about 0.3 seconds and finishes before the end of the clip.
 [BACKGROUND ACTION — constant, unsettling movement] A long column of yellow and cream Soviet buses stretches down the street; streams of residents with small bags hurry to the doors, militia officers in grey uniforms wave them on, a child clutching a toy looks back from a bus window, doors close and one bus after another pulls away raising dust; a forgotten ball rolls slowly across the empty pavement.
-[SETTING & ERA] Afternoon of 27 April 1986, Pripyat, hazy sun, white panel apartment blocks, 1980s LAZ and Ikarus style buses.
+[SETTING & ERA] Afternoon of 27 April 1986, wide avenue of Pripyat lined with white sixteen-storey apartment towers, hazy sun, 1980s LAZ and Ikarus style buses.
 [CAMERA] Lateral tracking shot along the bus column keeping Vera in the right foreground, ending on her face. Vertical 9:16, Vera and the action both clearly visible.
 [LIGHT] Hazy pale sunlight, dust in the beams, washed-out colours — stylized, soft, like an animated film.
 [AUDIO] Only Vera's Russian line in her character voice, plus eerie ambient sound: bus engines, doors hissing, footsteps, murmur of the crowd without words, a long distant bus horn.
@@ -201,19 +201,19 @@ Ingredients: @Vera (персонаж) + @loc_pripyat_street.png
 ```
 
 ## Клип 12 — Не одна кнопка (финал) · 10 с · только промпт
-Ingredients: @Vera (персонаж) + @loc_pripyat_street.png
+Ingredients: @Vera (персонаж) + @loc_ferris_wheel_today.png
 Реплика (20 слов): «Виновата не одна кнопка, а изъян реактора и нарушения при испытании. Город пустует уже сорок лет. Такой была ночь Чернобыля.»
 ```
 [STYLE — MOST IMPORTANT] Stylized 3D animated feature-film look with a hand-painted, painterly texture — exactly the same drawn, illustrated style as the @Vera character images. Soft painted shading, slightly simplified stylized forms, smooth painted skin without pores, visible brush-like texture in hair, clothes and background. This is an animated cartoon-film frame, NOT live action, NOT a photograph, NOT photorealistic, NOT a real human actor. Mood: haunting emptiness, ghost-town silence, a quiet final chill.
-[SCENE] Final: Vera alone in the empty, evacuated city; only the wind is moving.
-[REFERENCES] Vera is the character @Vera — keep her face, body, outfit, art style and voice exactly as in the character images, in every frame. Do not make her more realistic than the character images. Use @loc_pripyat_street as the setting, painted in the same animated style.
-[VERA] Vera is the main character and stays clearly visible from the first to the last frame, face readable. She stands in the middle of the empty street facing the camera; the wind pulls at her hair and scarf; after the last sentence she stays silent and holds her gaze on the camera. Long dark worn coat, wine-red scarf, brass compass-rose brooch, dark waistcoat, light shirt.
+[SCENE] Final: Vera stands alone in the abandoned Pripyat amusement park today, in front of the rusted yellow Ferris wheel that never opened.
+[REFERENCES] Vera is the character @Vera — keep her face, body, outfit, art style and voice exactly as in the character images, in every frame. Do not make her more realistic than the character images. Use @loc_ferris_wheel_today as the setting, painted in the same animated style.
+[VERA] Vera is the main character and stays clearly visible from the first to the last frame, face readable. She stands in front of the Ferris wheel facing the camera; the wind pulls at her hair and scarf; after the last sentence she stays silent and holds her gaze on the camera. Long dark worn coat, wine-red scarf, brass compass-rose brooch, dark waistcoat, light shirt.
 [SPEECH] Vera says aloud in Russian, once, in her own character voice, quiet and firm, no pathos, with a short pause before the last sentence: "Виновата не одна кнопка, а изъян реактора и нарушения при испытании. Город пустует уже сорок лет. Такой была ночь Чернобыля." Russian only. Her lips and jaw move naturally with every Russian word. She starts at about 0.3 seconds and finishes before the end of the clip.
-[BACKGROUND ACTION — constant, unsettling movement] The abandoned city moves only with the wind: papers and dead leaves sweep across the street, a curtain flaps out of an open window high above, a swing creaks back and forth on an empty playground, a stray dog stops and stares, then runs off; one by one the last lit windows go dark; the buildings are intact.
-[SETTING & ERA] After the evacuation, late April 1986, Pripyat, overcast evening, intact white panel apartment blocks with dark windows.
-[CAMERA] Slow pull-back that rises like a crane, the empty city opening up around her, Vera growing small in the centre. Vertical 9:16, Vera and the action both clearly visible.
+[BACKGROUND ACTION — constant, unsettling movement] Behind her the huge rusted yellow Ferris wheel creaks and its gondolas sway in the wind; rusty bumper cars stand in fallen leaves; young birch trees grow through the cracked concrete; dead leaves swirl across the empty park; a crow lands on a gondola; behind the trees stand empty grey apartment towers with dark broken windows.
+[SETTING & ERA] Present day, abandoned Pripyat amusement park, overcast autumn evening, decades of decay: rust, moss, trees growing through the park.
+[CAMERA] Slow pull-back that rises like a crane, the Ferris wheel towering over her, Vera growing small in the centre. Vertical 9:16, Vera and the action both clearly visible.
 [LIGHT] Cold grey-blue overcast light, desaturated, deep shadows in the windows, her wine-red scarf the only warm colour — stylized, soft, like an animated film.
-[AUDIO] Only Vera's Russian line in her character voice, plus eerie ambient sound: wind, rustling leaves, a creaking swing, a door banging somewhere far away, then silence.
+[AUDIO] Only Vera's Russian line in her character voice, plus eerie ambient sound: wind, rustling leaves, the slow metallic creak of the Ferris wheel, a crow's cry, then silence.
 [AVOID] No photorealism, no live-action look, no real-person faces, no skin pores or photographic detail; no shots without Vera; no static or frozen background; no monsters, no supernatural creatures; no English speech, no other voices speaking words, no extra lines, no music; no subtitles or on-screen text, no logos, no watermarks; no extra fingers, no face, style or outfit changes, no gratuitous gore.
 [STYLE REMINDER] Whole clip in the same stylized painterly 3D animation style as the @Vera character images, not realistic; all other people are stylized animated characters too; haunting ghost-town emptiness.
 ```

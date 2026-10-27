@@ -65,3 +65,38 @@ Vertical 9:16 image of the vast turbine hall of a Soviet nuclear power plant at 
 ```
 Vertical 9:16 image of the central reactor hall of a Soviet RBMK nuclear power plant in 1986: a vast high concrete hall, a huge round floor made of hundreds of small square metal caps in a tight grid over the reactor, a massive refuelling machine standing on rails above the floor, cold spotlights from the high ceiling, a red warning lamp on the wall. No people. Semi-realistic cinematic 3D/2.5D animation with a subtle painterly texture, atmospheric depth. No text, no letters, no labels with readable writing, no logos, no watermark.
 ```
+
+`loc_cooling_pond` — `refs/loc_cooling_pond.png` (клип 06):
+```
+Vertical 9:16 image of the concrete bank of the cooling pond of a Soviet nuclear power plant at night in spring 1986: dark still water in the foreground, on the far shore the long plant buildings with a red-and-white striped ventilation stack, lights reflected in the water, light fog over the water, reeds at the edge. No people. Semi-realistic cinematic 3D/2.5D animation with a subtle painterly texture, atmospheric depth. No text, no logos, no watermark.
+```
+
+`loc_unit4_ruins` — `refs/loc_unit4_ruins.png` (клип 07):
+```
+Vertical 9:16 image at the foot of a destroyed Soviet nuclear reactor building at night in 1986: torn concrete walls and twisted steel beams, the ground covered with smoking concrete chunks, scattered dark graphite blocks and twisted metal, small fires burning, red glow from the open top of the building, smoke. No people. Semi-realistic cinematic 3D/2.5D animation with a subtle painterly texture, atmospheric depth. No text, no logos, no watermark.
+```
+
+`loc_turbine_wall` — `refs/loc_turbine_wall.png` (клип 08):
+```
+Vertical 9:16 image of the long outer concrete wall of a Soviet power plant turbine hall at night in 1986, a tall vertical steel fire ladder going up to the flat roof, fire and smoke visible on the roof edge above, a wide concrete driveway in front, sodium lamps. No people, no vehicles. Semi-realistic cinematic 3D/2.5D animation with a subtle painterly texture, atmospheric depth. No text, no logos, no watermark.
+```
+
+`loc_roof` — `refs/loc_roof.png` (клип 09):
+```
+Vertical 9:16 image of the flat bitumen roof of a Soviet power plant turbine hall at dawn in 1986: puddles of water, scattered burnt debris, fire hoses lying across the roof, the tall red-and-white striped ventilation stack rising next to it, steam and smoke, cold pre-dawn sky. No people. Semi-realistic cinematic 3D/2.5D animation with a subtle painterly texture, atmospheric depth. No text, no logos, no watermark.
+```
+
+`loc_pripyat_square` — `refs/loc_pripyat_square.png` (клип 10):
+```
+Vertical 9:16 image of the central square of the Soviet city of Pripyat on a sunny April morning in 1986: the modernist Palace of Culture with large glass windows, a tall white hotel building, wide paved square, flower beds, young poplars, white apartment blocks behind. No people. Semi-realistic cinematic 3D/2.5D animation with a subtle painterly texture, atmospheric depth. No text, no letters, no readable signs, no logos, no watermark.
+```
+
+`loc_pripyat_avenue` — `refs/loc_pripyat_avenue.png` (клип 11):
+```
+Vertical 9:16 image of a wide avenue in the Soviet city of Pripyat in 1986, lined with tall white sixteen-storey apartment towers, wide sidewalks, young trees, hazy afternoon sun. No people, no vehicles. Semi-realistic cinematic 3D/2.5D animation with a subtle painterly texture, atmospheric depth. No text, no letters, no readable signs, no logos, no watermark.
+```
+
+`loc_ferris_wheel_today` — `refs/loc_ferris_wheel_today.png` (клип 12):
+```
+Vertical 9:16 image of the abandoned Pripyat amusement park today: the huge rusted yellow Ferris wheel with hanging gondolas, rusty bumper cars in fallen leaves, young birch trees growing through cracked concrete, empty grey apartment towers behind the trees, overcast autumn evening. No people. Semi-realistic cinematic 3D/2.5D animation with a subtle painterly texture, atmospheric depth. No text, no letters, no logos, no watermark.
+```
