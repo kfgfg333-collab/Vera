@@ -55,3 +55,13 @@ Vertical 9:16 image of a residential street in a young Soviet city in April 1986
 ```
 Vertical 9:16 full-body reference image of a Soviet firefighter in 1986, a man in his twenties: dark canvas firefighter turnout coat with a wide belt, canvas trousers, rubber boots, a simple dark fire helmet, no respirator mask, holding a folded canvas fire hose. Plain light warm-grey background, soft even light. Semi-realistic cinematic 3D/2.5D animation with a subtle painterly texture, natural adult proportions. Single character only, no text, no badges with readable writing, no logos, no watermark.
 ```
+
+`loc_turbine_hall` — `refs/loc_turbine_hall.png` (клип 02):
+```
+Vertical 9:16 image of the vast turbine hall of a Soviet nuclear power plant at night in 1986: giant rounded turbine and generator casings in a long row, thick pipes, metal walkways and railings, overhead cranes high above, dim yellowish ceiling lamps disappearing into darkness, light steam haze. No people. Semi-realistic cinematic 3D/2.5D animation with a subtle painterly texture, atmospheric depth. No text, no letters, no labels with readable writing, no logos, no watermark.
+```
+
+`loc_reactor_hall` — `refs/loc_reactor_hall.png` (клипы 03, 05):
+```
+Vertical 9:16 image of the central reactor hall of a Soviet RBMK nuclear power plant in 1986: a vast high concrete hall, a huge round floor made of hundreds of small square metal caps in a tight grid over the reactor, a massive refuelling machine standing on rails above the floor, cold spotlights from the high ceiling, a red warning lamp on the wall. No people. Semi-realistic cinematic 3D/2.5D animation with a subtle painterly texture, atmospheric depth. No text, no letters, no labels with readable writing, no logos, no watermark.
+```
