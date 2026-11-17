@@ -3,7 +3,7 @@ from PIL import Image, ImageDraw, ImageFont, ImageFilter
 import numpy as np, zlib
 
 D = sys.argv[1]
-W, H, FPS = 720, 1280, 30
+W, H, FPS = 720, 1280, 60
 TL = json.load(open(f"{D}/timeline.json"))
 S = TL["sent"]; TOTAL = TL["total"]
 FONT = f"{D}/fonts/M.ttf"
@@ -138,20 +138,20 @@ def _load(name):
     if name not in _IC: _IC[name] = Image.open(f"{REF}/{name}.png").convert("RGBA")
     return _IC[name]
 _ICS = {}
-def icon(img, name, cx, cy, h, p=1.0, ang=0, glow=True, alpha=1.0, gray=False):
-    if p <= 0: return
-    sc = back(p); hh = max(4, int(h * sc))
+CUR = {"t": 0.0, "si": 0, "lt": 0.0, "cam": (0.0, 0.0)}
+def ease_io(x): x = clamp(x); return x * x * (3 - 2 * x)
+def _icon_img(name, hh, gray):
     key = (name, hh, gray)
     if key not in _ICS:
         src = _load(name); w = max(4, int(src.width * hh / src.height))
         im = src.resize((w, hh), Image.LANCZOS)
         if gray:
             a = im.getchannel("A"); im = im.convert("L").convert("RGBA"); im = Image.blend(im, Image.new("RGBA", im.size, (40, 40, 50, 255)), 0.35); im.putalpha(a)
-        if len(_ICS) > 400: _ICS.clear()
+        if len(_ICS) > 600: _ICS.clear()
         _ICS[key] = im
-    im = _ICS[key]
+    return _ICS[key]
+def _put(img, im, cx, cy, ang, a, glow):
     if ang: im = im.rotate(ang, expand=True, resample=Image.BICUBIC)
-    a = clamp(p * 3) * alpha
     if a < 1:
         im = im.copy(); im.putalpha(im.getchannel("A").point(lambda v: int(v * a)))
     x, y = int(cx - im.width / 2), int(cy - im.height / 2)
@@ -160,6 +160,24 @@ def icon(img, name, cx, cy, h, p=1.0, ang=0, glow=True, alpha=1.0, gray=False):
         sh = Image.new("RGBA", im.size, (0, 0, 0, 255)); sh.putalpha(im.getchannel("A").point(lambda v: int(v * 0.55)))
         g.alpha_composite(sh, (30, 38)); img.alpha_composite(g.filter(ImageFilter.GaussianBlur(12)), (x - 30, y - 30))
     img.alpha_composite(im, (x, y))
+def icon(img, name, cx, cy, h, p=1.0, ang=0, glow=True, alpha=1.0, gray=False):
+    if p <= 0: return
+    t = CUR["t"]; cam = CUR["cam"]; seed = zlib.crc32(name.encode()) % 97
+    side = -1 if seed % 2 else 1
+    def pose(pp):
+        e = ease_out(pp)
+        x = cx + cam[0] * 0.6 + math.sin(t * 0.9 + seed) * 1.5 + side * (1 - e) * 60
+        y = cy + cam[1] * 0.6 + math.sin(t * 1.1 + seed) * 2 + (1 - e) * 100 - math.sin(e * math.pi) * 25
+        r = ang + math.sin(t * 0.8 + seed) * 0.6 + side * (1 - e) * 12
+        return x, y, r
+    if p < 1:  # motion trail
+        for k, ga in ((0.16, 0.18), (0.08, 0.32)):
+            pp = p - k
+            if pp > 0:
+                x, y, r = pose(pp); hh = max(4, int(h * back(pp)) // 2 * 2)
+                _put(img, _icon_img(name, hh, gray), x, y, r, ga * alpha * clamp(pp * 3), False)
+    x, y, r = pose(p); hh = max(4, int(h * back(p)) // 2 * 2) if p < 1 else int(h)
+    _put(img, _icon_img(name, hh, gray), x, y, r, clamp(p * 3) * alpha, glow)
 
 # character: pose busts (refs2) with team patch swap, or full-body kits
 POSE = {"calm": "p_calm", "worried": "p_puzzled", "angry": "p_angry", "smirk": "p_smirk", "conf": "p_conf", "shock": "p_shock", "point": "p_point"}
@@ -192,21 +210,32 @@ def _sprite(badge, mood):
     _CH[key] = src; return src
 _CHS = {}
 def character(img, cx, cy, s=1.0, badge="BC.GAME", t=0.0, mood="calm", bcol=None):
-    breath = 1 + 0.012 * math.sin(t * 2.2)
+    t = CUR["t"]; lt = CUR["lt"]; cam = CUR["cam"]
     base = 560 if mood == "full" else 470
-    hh = int(base * s * breath); key = (badge, mood, hh)
+    hh = int(base * s); key = (badge, mood, hh)
     if key not in _CHS:
         sp = _sprite(badge, mood); w = int(sp.width * hh / sp.height)
         if len(_CHS) > 300: _CHS.clear()
         _CHS[key] = sp.resize((w, hh), Image.LANCZOS)
     sp = _CHS[key]
-    dx = math.sin(t * 38) * 3 if mood == "angry" else math.sin(t * 0.9) * 4
-    top = cy - 215 * s + math.sin(t * 2.2) * 3 - (hh - base * s)
-    x = int(cx - sp.width / 2 + dx)
-    g = Image.new("RGBA", (sp.width + 80, sp.height + 80), (0, 0, 0, 0))
-    rim = Image.new("RGBA", sp.size, (255, 220, 120, 255)); rim.putalpha(sp.getchannel("A").point(lambda v: int(v * 0.35)))
-    g.alpha_composite(rim, (40, 40)); img.alpha_composite(g.filter(ImageFilter.GaussianBlur(16)), (x - 40, int(top) - 40))
-    img.alpha_composite(sp, (x, int(top)))
+    beat = 0.0
+    for a_, b_, w_ in S[CUR["si"]]["abs"]:
+        if a_ <= t: beat = math.exp(-(t - a_) * 9)
+    spring = math.exp(-lt * 4) * math.cos(lt * 10)
+    breath = math.sin(t * 2.2)
+    sy = 1 + 0.03 * spring + 0.006 * beat + 0.006 * breath
+    sx = 1 - 0.022 * spring - 0.004 * beat
+    lean = math.sin(t * 0.6) * 1.0 + (math.sin(t * 9) * 0.5 if mood == "angry" else 0)
+    w2, h2 = max(4, int(sp.width * sx)), max(4, int(sp.height * sy))
+    im = sp.resize((w2, h2), Image.BILINEAR)
+    pad = Image.new("RGBA", (w2 + 80, h2 + 40), (0, 0, 0, 0)); pad.alpha_composite(im, (40, 40))
+    im = pad.rotate(lean, center=(pad.width / 2, pad.height), resample=Image.BICUBIC)
+    bottom = cy - 215 * s + base * s + cam[1] + math.sin(t * 1.6) * 1.5
+    x = int(cx - im.width / 2 + cam[0] + math.sin(t * 0.6) * 2); y = int(bottom - im.height)
+    g = Image.new("RGBA", (im.width + 80, im.height + 80), (0, 0, 0, 0))
+    rim = Image.new("RGBA", im.size, (255, 220, 120, 255)); rim.putalpha(im.getchannel("A").point(lambda v: int(v * 0.35)))
+    g.alpha_composite(rim, (40, 40)); img.alpha_composite(g.filter(ImageFilter.GaussianBlur(16)), (x - 40, y - 40))
+    img.alpha_composite(im, (x, y))
 
 BRUSH = {YEL: "b_yel", RED: "b_red", WHITE: "b_white"}
 def tape(img, cx, cy, s, ang=-6, col=YEL, tcol=(15, 15, 15), size=40, p=1.0):
@@ -218,7 +247,9 @@ def tape(img, cx, cy, s, ang=-6, col=YEL, tcol=(15, 15, 15), size=40, p=1.0):
     sh = Image.new("RGBA", br.size, (0, 0, 0, 255)); sh.putalpha(br.getchannel("A").point(lambda v: int(v * 0.5)))
     lay.alpha_composite(sh, (14, 16)); lay = lay.filter(ImageFilter.GaussianBlur(5)); lay.alpha_composite(br, (6, 6))
     ImageDraw.Draw(lay).text((6 + tw / 2, 6 + th / 2), s, font=f, fill=tcol, anchor="mm", stroke_width=3, stroke_fill=col)
-    sc = back(p)
+    sc = back(p); t = CUR["t"]; cam = CUR["cam"]
+    ang = ang + (1 - ease_out(p)) * 8 + math.sin(t * 1.0 + len(s)) * 0.5
+    cx += cam[0] * 0.7 + (1 - ease_out(p)) * -80; cy += cam[1] * 0.7
     lay = lay.resize((max(1, int(lay.width * sc)), max(1, int(lay.height * sc))), Image.BICUBIC).rotate(ang, expand=True, resample=Image.BICUBIC)
     img.alpha_composite(lay, (int(cx - lay.width / 2), int(cy - lay.height / 2)))
 
@@ -227,7 +258,7 @@ def scene(img, si, t, lt, dur):
     d = ImageDraw.Draw(img)
     pin = lambda delay=0.0, length=0.35: clamp((lt - delay) / length)
     wt = lambda k: wtime(si, k) - S[si]["start"]
-    fl = math.sin(t * 2.0) * 6
+    fl = math.sin(t * 1.2) * 3
     if si == 0:
         icon(img, "region", 360, 300 + fl, 190, pin(0.05))
         tag(img, 360, 450, "РЕГИОН СМЕНЁН", RED, 34, pin(wt(3)))
@@ -294,7 +325,7 @@ def scene(img, si, t, lt, dur):
         icon(img, "aceap", lerp(860, 520, slide), 400 - fl, 200, 1.0, ang=3)
         icon(img, "i_au", lerp(860, 520, slide) + 70, 280 - fl, 55, 1.0, ang=6)
         if si == 10:
-            sc = 1 + 0.08 * math.sin(lt * 10)
+            sc = 1 + 0.04 * math.sin(lt * 4)
             icon(img, "i_q", 360, 700, int(190 * sc), 1.0)
             character(img, 360, 1000, 0.55, "BC.GAME", t, "worried")
         else:
@@ -333,7 +364,7 @@ def scene(img, si, t, lt, dur):
     elif si == 18:
         remain = max(0, 24 * 3600 - (lt / max(1, dur)) * 24 * 3600)
         hh, mm, ss = int(remain // 3600), int(remain % 3600 // 60), int(remain % 60)
-        icon(img, "h24", 190, 320, 220, pin(0.05), ang=math.sin(t * 9) * 3)
+        icon(img, "h24", 190, 320, 220, pin(0.05), ang=math.sin(t * 3) * 1.5)
         text_c(d, (480, 290), "НА НОВОЕ", 28, (230, 215, 215), "Black", 3); text_c(d, (480, 325), "НАЗВАНИЕ", 28, (230, 215, 215), "Black", 3)
         text_c(d, (480, 385), f"{hh:02d}:{mm:02d}:{ss:02d}", 50, RED, "Black", 4)
         tape(img, 360, 510, "СУТКИ", -4, YEL, size=46, p=pin(wt(4)))
@@ -363,14 +394,14 @@ def scene(img, si, t, lt, dur):
         for _ in range(250):
             x, y = random.randint(0, W - 1), random.randint(0, 1100); d.point((x, y), fill=(255, 230, 190))
     elif si == 22:
-        icon(img, "scales", 360, 340, 300, pin(0.05), ang=math.sin(t * 2.5) * 4)
+        icon(img, "scales", 360, 340, 300, pin(0.05), ang=math.sin(t * 1.5) * 2)
         character(img, 360, 860, 0.8, "GOSH", t, "point")
         if t > S[22]["end"] + 0.3:
             tape(img, 360, 600, "А ВЫ КАК ДУМАЕТЕ?", -3, YEL, size=40, p=clamp((t - S[22]["end"] - 0.3) / 0.35))
         if t > S[22]["end"] + 0.9:
             q = clamp((t - S[22]["end"] - 0.9) / 0.35)
             icon(img, "i_avatar", 150, 1110, 130, q)
-            icon(img, "i_sub", 430, 1110, 95, clamp(q * 1.2 - 0.1), ang=math.sin(t * 8) * 1.5)
+            icon(img, "i_sub", 430, 1110, 95, clamp(q * 1.2 - 0.1), ang=math.sin(t * 3) * 0.8)
 
 BGMAP = {0: "blue", 1: "red", 2: "blue", 3: "red", 4: "red", 5: "red", 6: "red", 7: "gold", 8: "blue", 9: "blue", 10: "blue", 11: "gold", 12: "blue", 13: "green", 14: "green", 15: "red", 16: "gold", 17: "red", 18: "red", 19: "gold", 20: "blue", 21: "sepia", 22: "blue"}
 
@@ -409,7 +440,10 @@ def draw_caption(img, t):
         x = 360 - tw / 2; y = y0 + li * 68
         for w in ws:
             col = YEL if wi == key else WHITE
-            d.text((x, y), w, font=f, fill=col, anchor="lm", stroke_width=5, stroke_fill=(0, 0, 0)); x += f.getbbox(w)[2] + 16; wi += 1
+            st = c[min(wi, len(c) - 1)][0]; pw = 1 + 0.07 * math.exp(-max(0, t - st) * 11) if t >= st else 1
+            ww = f.getbbox(w)[2]
+            fw = F(int(54 * sc * pw), "Black") if pw > 1.01 else f
+            d.text((x + ww / 2, y - (pw - 1) * 20), w, font=fw, fill=col, anchor="mm", stroke_width=5, stroke_fill=(0, 0, 0)); x += ww + 16; wi += 1
 
 def sentence_at(t):
     for i, s in enumerate(S):
@@ -442,18 +476,37 @@ def bg_frame(si, t, lt, dur):
     x = int(mx / 2 + dirx * (q - 0.5) * mx * 0.9); y = int(my * (0.8 - 0.6 * q))
     return im.crop((x, y, x + W, y + H))
 
-def frame(t):
-    si, lt, dur = sentence_at(t)
+def _zoom(im, z, blur=0):
+    if abs(z - 1) > 0.002:
+        w, h = int(W / z), int(H / z); x, y = (W - w) // 2, int((H - h) * 0.4)
+        im = im.crop((x, y, x + w, y + h)).resize((W, H), Image.BILINEAR)
+    if blur > 0.4: im = im.filter(ImageFilter.GaussianBlur(blur))
+    return im
+def layer(si, t):
+    st = S[si]["start"]; nxt = S[si + 1]["start"] if si + 1 < len(S) else TOTAL + 1
+    lt = max(0.0, t - st); dur = nxt - st
+    CUR.update(t=t, si=si, lt=lt)
     img = bg_frame(si, t, lt, dur)
     d = ImageDraw.Draw(img)
     for (x, y, r, ph) in DUST:
         yy = (y - t * 12 * r) % 1100; a = int(60 + 60 * math.sin(t * 1.5 + ph))
-        d.ellipse([x - r, yy - r, x + r, yy + r], fill=(255, 255, 255, a))
+        d.ellipse([x - r + CUR["cam"][0] * 0.3, yy - r, x + r + CUR["cam"][0] * 0.3, yy + r], fill=(255, 255, 255, a))
     scene(img, si, t, lt, dur)
-    if lt < 0.12 and si > 0:
-        fl = Image.new("RGBA", img.size, (255, 255, 255, int(110 * (1 - lt / 0.12)))); img.alpha_composite(fl)
+    return _zoom(img, 1 + 0.035 * ease_io(lt / max(1.0, dur)))
+TR = 0.35
+def frame(t):
+    si, lt, dur = sentence_at(t)
+    CUR["cam"] = (math.sin(t * 0.3) * 6, math.cos(t * 0.25) * 4)
+    img = layer(si, t)
+    if si > 0 and lt < TR:
+        q = ease_io(lt / TR); sp = math.sin(q * math.pi)
+        prev = _zoom(layer(si - 1, t), 1 + 0.10 * q, 2 * sp)
+        new = _zoom(img, 1.08 - 0.08 * q, 2 * sp)
+        img = Image.blend(prev, new, q)
+        CUR.update(si=si, lt=lt)
     draw_caption(img, t)
     return img.convert("RGB")
+def _fb(i): return frame(i / FPS).tobytes()
 
 if __name__ == "__main__":
     if len(sys.argv) > 2 and sys.argv[2] == "preview":
@@ -464,6 +517,7 @@ if __name__ == "__main__":
     n = int(TOTAL * FPS)
     p = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-",
                           "-vf", "scale=1080:1920:flags=lanczos", "-c:v", "libx264", "-preset", "medium", "-crf", "19", "-pix_fmt", "yuv420p", f"{D}/video_noaudio.mp4"], stdin=subprocess.PIPE)
-    for i in range(n):
-        p.stdin.write(frame(i / FPS).tobytes())
+    import multiprocessing as mp
+    with mp.get_context("fork").Pool(4) as pool:
+        for buf in pool.imap(_fb, range(n), chunksize=24): p.stdin.write(buf)
     p.stdin.close(); p.wait(); print("frames", n)
